@@ -1,0 +1,113 @@
+.contact__container {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.contact__info {
+  position: absolute;
+  top: 23rem;
+}
+.contact__container h1 {
+  letter-spacing: 0.01em;
+  transform: matrix(1, 0, 0.01, 1, 0, 0);
+  font-size: 5rem;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(#262325, #c0c4c3);
+  opacity: 80%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact__info h3 {
+  letter-spacing: 0.04em;
+  color: rgba(11, 11, 11, 0.87);
+  margin-top: 2rem;
+  mix-blend-mode: normal;
+  transform: matrix(1, 0, 0.01, 1, 0, 0);
+  font-size: 1.5rem;
+}
+
+.contact__icons {
+  position: absolute;
+  top: 40rem;
+  display: flex;
+  flex-wrap: wrap;
+  opacity: 90%;
+  box-shadow: #c0c4c3;
+}
+
+.contact__icons img {
+  margin-left: 15px;
+  transform: scale(1);
+  transition: 2s;
+}
+
+.contact__icons img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  transition: 1s;
+}
+
+h3 {
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .contact__container {
+    background-image: url(../assets/Background/contact__small.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .contact__container {
+    background-image: url(../assets/Background/contact__medium.jpeg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+  .contact__icons img {
+    width: 40px;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .contact__container {
+    background-image: url(../assets/Background/contact__image.jpeg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+  .contact__icons img {
+    width: 50px;
+    margin-left: 5rem;
+    margin-top: 20rem;
+  }
+  .contact__container h1 {
+    font-size: 15rem;
+  }
+  .contact__info h3 {
+    font-size: 2.5rem;
+  }
+}

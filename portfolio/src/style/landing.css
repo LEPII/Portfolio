@@ -1,0 +1,141 @@
+.landing__container {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  line-height: 65.33%;
+  text-align: center;
+  letter-spacing: 0.045em;
+  color: rgba(179, 183, 217, 1);
+  background: linear-gradient(180deg, #b3b7d9 0%, #d6d5e6 96.27%);
+  text-shadow: -1px 0px 6px rgba(169, 178, 212, 0.77);
+  cursor: default;
+}
+
+.landing__container h1 {
+  position: absolute;
+  word-spacing: 4.1rem;
+  top: 18rem;
+  font-size: 6.8rem;
+  text-transform: uppercase;
+
+  font-weight: lighter;
+}
+
+.landing__container img {
+  position: absolute;
+  bottom: -2.6rem;
+  left: 12.2rem;
+  width: 17%;
+}
+
+.landing__container h2 {
+  position: absolute;
+  top: 26rem;
+  font-size: 2.6rem;
+  text-transform: uppercase;
+  opacity: 77%;
+  line-height: 2.6rem;
+}
+
+.landing__container h3 {
+  position: absolute;
+  top: 32rem;
+  font-size: 1.6rem;
+  margin-left: 2.3rem;
+  margin-right: 2.3rem;
+  line-height: 1.8rem;
+}
+
+.landing__container h1,
+h2,
+h3 {
+  margin-top: 1rem;
+  opacity: 77%;
+}
+
+@media screen and (max-width: 600px) {
+  .landing__container {
+    background-image: url(../assets/Background/welcome__small.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .landing__container {
+    background-image: url(../assets/Background/welcome__medium.jpeg);
+    background-size: cover;
+    background-position: right;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+
+  .landing__container h1 {
+    word-spacing: 60px;
+    font-size: 11.5rem;
+  }
+
+  .landing__container h2 {
+    font-size: 4.4rem;
+  }
+
+  .landing__container h3 {
+    font-size: 2.4rem;
+    line-height: 110%;
+  }
+  img {
+    margin-left: 77px;
+    margin-bottom: -20px;
+    width: 18%;
+  }
+}
+
+@media screen and (min-width: 1201px) {
+  .landing__container {
+    background-image: url(../assets/Background/welcome_image.jpeg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100vw;
+  
+  }
+  .landing__container h1 {
+    
+    word-spacing: 60px;
+    font-size: 15.5rem;
+  }
+
+  .landing__container h2 {
+    font-size: 6.4rem;
+    margin-top: 7rem;
+  }
+
+  .landing__container h3 {
+    font-size: 3.4rem;
+    line-height: 110%;
+    margin-top: 10rem;
+  }
+  img {
+    margin-left: 14rem;
+    margin-bottom: -4rem;
+    width: 18%;
+  }
+}

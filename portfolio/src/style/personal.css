@@ -1,0 +1,28 @@
+@media screen and (max-width: 600px) {
+  .personal__container {
+    background-image: url(../assets/Background/personal__small.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .personal__container {
+    background-image: url(../assets/Background/personal__medium.jpeg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+}
+@media screen and (min-width: 1201px) {
+  .personal__container {
+    background-image: url(../assets/Background/personal_image.jpeg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+}

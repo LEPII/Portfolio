@@ -1,0 +1,56 @@
+:root {
+  --landing: #aea7d1;
+}
+
+.btn {
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn--landing {
+  color: whitesmoke;
+  border: none;
+  opacity: 77%;
+  background: radial-gradient(
+      15.76% 63.44% at 90.91% 133.4%,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    radial-gradient(
+      15.55% 80.88% at 34.43% 51.43%,
+      #aea7d1 0%,
+      rgba(187, 182, 219, 0.97) 100%
+    );
+}
+
+.btn--landing:after {
+  width: 100%;
+  height: 100%;
+}
+
+.btn--small {
+  position: absolute;
+  top: 44.5rem;
+  width: 15.4rem;
+  height: 3.9rem;
+  letter-spacing: 0.085em;
+  font-size: 2.4rem;
+  letter-spacing: 0.085em;
+  padding: 0.5rem;
+}
+
+@media screen and (min-width: 1201px) {
+  .btn--small {
+    position: absolute;
+    top: 54.5rem;
+    width: 18.4rem;
+    height: 4.3rem;
+    font-size: 2.7rem;
+    padding: 0.7rem;
+  }
+}
