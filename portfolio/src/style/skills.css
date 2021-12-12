@@ -1,72 +1,70 @@
-.skills__container {
-  position: relative;
+.skills_mini_container {
+  position: absolute;
 }
 
 .skills__container h1 {
-  position: absolute;
-  top: 5rem;
-  margin-left: 2rem;
-  font-size: 10rem;
+  font-size: 6.6rem;
   text-transform: uppercase;
   letter-spacing: 0.135em;
   mix-blend-mode: lighten;
   text-shadow: -4px -1px 8px rgba(70, 84, 74, 0.8);
+  opacity: 100%;
+  cursor: default;
+  margin-top: 20%;
+  margin-bottom: 25%;
+  margin-left: 10%;
+  text-shadow: 0 0 1em rgb(255, 255, 255), 0 0 1em rgba(63, 107, 169, 0.9),
+    0 0 0.2em rgba(125, 157, 202, 0.9);
+    text-shadow: black;
+}
+
+.skills__header {
   transform: matrix(1, 0, 0.01, 1, 0, 0);
-  background: -webkit-linear-gradient(#525252, #fdf9f7);
-  opacity: 60%;
+  background: -webkit-linear-gradient(#584e72, #7edaa7);
+  opacity: 80%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .skills__list {
-  position: relative;
-  top: 27rem;
-  font-size: 2rem;
-  text-shadow: 0px -1px 8px rgba(64, 90, 71, 0.8);
-  text-align: center;
-  color: whitesmoke;
-  border: none;
-  border-radius: 25%;
-  padding: 0.5rem;
-  margin-left: 30px;
-  margin-top: 2rem;
-  width: 15rem;
-  opacity: 97%;
-  background: radial-gradient(
-      15.76% 63.44% at 90.91% 133.4%,
-      #292727 0%,
-      rgba(94, 75, 75, 0) 76%
-    ),
-    radial-gradient(
-      15.55% 80.88% at 34.43% 51.43%,
-      #508054 0%,
-      rgba(80, 128, 84, 0.57) 100%
-    );
+  display: inline;
+}
 
-  display: inline-block;
-  width: 10rem;
-  text-shadow: -4px -8px 8px rgb(21, 22, 21);
-  box-shadow: 5px 5px rgba(80, 89, 80, 0.1);
-  backdrop-filter: blur(30px);
-  opacity: 90%;
+.skills__button {
+    text-transform: uppercase;
+
+  border-radius: 16px;
+  margin-top: 3rem;
+  margin-left: 3rem;
   cursor: pointer;
+  background: radial-gradient(
+    77.28% 402.24% at 94.34% 88.54%,
+    #527a60 0%,
+    #84b997 100%
+  );
+  box-shadow: -1px -1px 15px rgba(255, 255, 255, 0.62), -1px 1px 21px #b4e6ab;
+  border-radius: 16px;
+  border: none;
+  text-align: center;
+  width: fit-content;
+  letter-spacing: 0.085em;
+  font-size: 2.1rem;
+  letter-spacing: 0.085em;
+  padding: 1rem;
   transform: scale(1);
   transition: 2s;
-}
-
-.skills__list:hover {
-  transform: scale(1.2);
+  color: whitesmoke;
   cursor: pointer;
-
-  transition: 1s;
 }
-.skills__container ul {
-  list-style-type: none;
-  text-align: center;
+
+.skills__button:hover {
+  transform: scale(1.2);
+  cursor:default;
 }
 
 @media screen and (max-width: 600px) {
   .skills__container {
+    position: relative;
     background-image: url(../assets/Background/skills__small.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -77,28 +75,33 @@
 }
 @media screen and (min-width: 601px) and (max-width: 1200px) {
   .skills__container {
+    position: relative;
     background-image: url(../assets/Background/skills__medium.jpeg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
     min-width: 100vw;
-    position: relative;
-  }
-  .skills__list {
-    background: #3f5c42;
-    vertical-align: bottom;
   }
   .skills_mini_container {
-    position: relative;
-    top: 21rem;
-    left: -2rem;
-    display: grid;
-    grid-template-columns: 90px 90px 90px;
-    grid-gap: 15px;
+    bottom: 8%;
+    width: 50vw;
   }
+
+  .skills__list {
+    width: 20vw;
+  }
+
+  .skills__container h1 {
+    font-size: 9rem;
+    margin-bottom: 5%;}
+}
+
+.skills__button {
+  margin-top: 3rem;
 }
 @media screen and (min-width: 1201px) {
   .skills__container {
+    position: relative;
     background-image: url(../assets/Background/skills_image.jpeg);
     background-size: cover;
     background-position: center;
@@ -106,24 +109,18 @@
     min-width: 100vw;
   }
 
-  .skills__list {
-    background: #3f5c42;
-    vertical-align: bottom;
-    font-size: 3rem;
-    width: 15rem;
-  }
-  .skills_mini_container {
-    position: relative;
-    top: 55rem;
-    left: -2rem;
-    display: grid;
-    grid-template-columns: 25rem 25rem 25rem;
-    grid-gap: 15px;
-    margin-left: 100px;
+.skills_mini_container {
+    bottom: 26rem;
+    max-width: 30vw;
+    left: 2rem;
+    text-align: center;
   }
   .skills__container h1 {
-    position: absolute;
-    top: 5rem;
     font-size: 18rem;
+    margin-bottom: 5%;
+    text-align: start;
   }
+  .skills__button {  font-size: 2.5rem;
+}
+
 }

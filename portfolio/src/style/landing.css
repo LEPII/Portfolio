@@ -1,72 +1,71 @@
-.landing__container {
-  position: relative;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  line-height: 65.33%;
+.landing__main {
+  position: absolute;
+  width: 94%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
   letter-spacing: 0.045em;
   color: rgba(179, 183, 217, 1);
-  background: linear-gradient(180deg, #b3b7d9 0%, #d6d5e6 96.27%);
-  text-shadow: -1px 0px 6px rgba(169, 178, 212, 0.77);
+  text-shadow: -1px 0px 6px rgba(169, 178, 212, 0.77); 
+  text-shadow: 1px 0px 22px #ffffff, -2px 0px 4px rgba(152, 147, 225, 0.87);
   cursor: default;
+  margin: 0;
 }
 
 .landing__container h1 {
-  position: absolute;
-  word-spacing: 4.1rem;
-  top: 18rem;
-  font-size: 6.8rem;
-  text-transform: uppercase;
 
+  font-size: 6.6rem;
+  text-transform: uppercase;
   font-weight: lighter;
+  margin-bottom: 10px; 
+
 }
 
 .landing__container img {
-  position: absolute;
-  bottom: -2.6rem;
-  left: 12.2rem;
-  width: 17%;
+  width: 5rem;
 }
 
 .landing__container h2 {
-  position: absolute;
-  top: 26rem;
-  font-size: 2.6rem;
+  font-size: 2.3rem;
   text-transform: uppercase;
-  opacity: 77%;
-  line-height: 2.6rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 15px;
 }
 
 .landing__container h3 {
-  position: absolute;
-  top: 32rem;
   font-size: 1.6rem;
-  margin-left: 2.3rem;
-  margin-right: 2.3rem;
-  line-height: 1.8rem;
+  margin-bottom: 25px;
 }
 
-.landing__container h1,
-h2,
-h3 {
-  margin-top: 1rem;
+.landing__button {
+  border-radius: 16px;
+  cursor: pointer;
+  color: whitesmoke;
+  border: none;
   opacity: 77%;
+  background: radial-gradient(
+    15.55% 80.88% at 34.43% 51.43%,
+    #a9a7d1 0%,
+    rgba(182, 189, 219, 0.97) 100%
+  );
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5),
+    0px 0px 27px rgba(85, 119, 232, 0.5);
+  mix-blend-mode: normal;
+  text-shadow: 1px 0px 22px #ffffff, -2px 0px 4px rgba(75, 64, 233, 0.87);
+  width: 15.4rem;
+  height: 3.9rem;
+  letter-spacing: 0.085em;
+  font-size: 2.4rem;
+  letter-spacing: 0.085em;
+  padding: 0.5rem;
+  transform: scale();
+}
+
+.landing__button:hover {
+  transform: scale(1.2);
+    transition: 2s;
+
 }
 
 @media screen and (max-width: 600px) {
@@ -84,12 +83,15 @@ h3 {
     background-image: url(../assets/Background/welcome__medium.jpeg);
     background-size: cover;
     background-position: right;
-    min-height: 100vh;
+    min-height:100vh;
     min-width: 100vw;
+  }
+  .landing__main {
+    top: 35%;
+    width: 90%;
   }
 
   .landing__container h1 {
-    word-spacing: 60px;
     font-size: 11.5rem;
   }
 
@@ -99,12 +101,10 @@ h3 {
 
   .landing__container h3 {
     font-size: 2.4rem;
-    line-height: 110%;
   }
-  img {
-    margin-left: 77px;
-    margin-bottom: -20px;
-    width: 18%;
+
+  .landing__container img {
+    width: 7.5rem;
   }
 }
 
@@ -115,27 +115,38 @@ h3 {
     background-position: center;
     min-height: 100vh;
     min-width: 100vw;
-  
   }
+
+  .landing__main {
+    top: 45%;
+    left: 33%;
+    width: 55%;
+  }
+
   .landing__container h1 {
-    
-    word-spacing: 60px;
-    font-size: 15.5rem;
+    font-size: 16.5em;
+    word-spacing: -15.5rem;
   }
 
   .landing__container h2 {
-    font-size: 6.4rem;
-    margin-top: 7rem;
+    font-size: 9.4rem;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    word-spacing: 1.5rem;
   }
 
   .landing__container h3 {
-    font-size: 3.4rem;
-    line-height: 110%;
-    margin-top: 10rem;
+    font-size: 4rem;
+    margin-bottom: 45px;
   }
-  img {
-    margin-left: 14rem;
-    margin-bottom: -4rem;
-    width: 18%;
+
+  .landing__container img {
+    width: 11.5rem;
+  }
+  .landing__button {
+    width: 20.4rem;
+    height: 5.3rem;
+    font-size: 2.9rem;
+    padding: 0.7rem;
   }
 }

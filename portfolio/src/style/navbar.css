@@ -1,0 +1,57 @@
+.navbar__list {
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  width: 100%;
+  height: 7rem;
+  font-size: 23px;
+  background: transparent;
+  transition: transform 500ms ease-in-out 25ms;
+}
+
+.navbar__list.active {
+  transform: scale(1.1);
+  background: rgba(3, 3, 4, 0.885);
+}
+
+.navbar__list ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+}
+
+.navbar__list ul li {
+  margin: 1rem 3rem;
+  padding: 1.2rem;
+}
+
+.navbar__list ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #b3b7d9;
+  background: -webkit-linear-gradient(to top right, #b3b7d9 36%, #d6d5e6 84%);
+  background: -moz-linear-gradient(to top right, #b3b7d9 36%, #d6d5e6 84%);
+  background: linear-gradient(to top right, #b3b7d9 36%, #d6d5e6 84%);
+  text-shadow: -1px 0px 6px rgba(169, 178, 212, 0.77);
+  text-shadow: 1px 0px 22px #ffffff, -2px 0px 4px rgba(152, 147, 225, 0.87);
+  box-shadow: blur20px 20px 50px 10px rgb(182, 182, 182);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.055em;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar__list {
+    visibility: hidden;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+  .navbar__list {
+    visibility: hidden;
+  }
+} ;

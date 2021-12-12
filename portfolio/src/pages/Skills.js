@@ -1,7 +1,5 @@
 import React from "react";
-import { Button } from "../components/Button";
 import "../style/skills.css";
-import "../style/button.css";
 
 const Skills = () => {
   const skills = [
@@ -9,10 +7,10 @@ const Skills = () => {
     { name: "HTML" },
     { name: "CSS" },
     { name: "React" },
-    { name: "Node.Js" },
+    { name: "Node.JS" },
     { name: "Express" },
-    { name: "NoSQL Database" },
-    { name: "SQL Database" },
+    { name: "NoSQL" },
+    { name: "SQL" },
     { name: "GraphQL" },
     { name: "Prisma" },
     { name: "Version Control" },
@@ -20,14 +18,12 @@ const Skills = () => {
   ];
 
   return (
-    <div className="skills__container">
-      <h1> Skills </h1>
+    <div className="skills__container" id="section3">
       <div className="skills_mini_container">
+        <h1 className="skills__header"> Skills </h1>
         {skills.map((skill, index) => (
-          <div key={index} className="skills__list">
-            <ul>
-              <li className="skills__items">{skill.name}</li>
-            </ul>
+          <div key={index} className="skills__list" data-aos="fade-up-right">
+            <button className="skills__button">{skill.name}</button>
           </div>
         ))}
       </div>
