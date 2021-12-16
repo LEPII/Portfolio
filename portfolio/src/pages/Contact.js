@@ -30,8 +30,17 @@ const Contact = () => {
       </div>
       <div className="contact__icons">
         {contact__icons.map((icon, index) => (
-          <a key={index} href={icon.link} target="_blank" rel="noreferrer">
-            <img src={icon.src} alt="Contact Icons" />
+          <a
+            key={index}
+            href={icon.link}
+            target="_blank"
+            rel="noreferrer"
+            data-aos="fade-up"
+            data-aos-easing="ease-out-back"
+            data-aos-delay="500"
+            data-aos-id="super-duper"
+          >
+            <img src={icon.src} alt="Contact Icons"/>  
           </a>
         ))}
       </div>

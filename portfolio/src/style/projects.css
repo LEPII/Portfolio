@@ -1,7 +1,7 @@
 .project__mini__container {
   position: absolute;
   width: 100vw;
-  top: 18%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-transform: uppercase;
@@ -31,14 +31,13 @@
 
 .project__showcase__container h3 {
   font-size: 1.2rem;
-margin-top: 1.5rem;  
+  margin-top: 1.5rem;
   background: -webkit-linear-gradient(#c1bdc0, #beb1ab);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.55), 0px 0px 10px #fbfbfb;
 
   cursor: default;
-
 }
 
 .project__links img {
@@ -88,7 +87,7 @@ margin-top: 1.5rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 100vh;
+    min-height: 90vh;
     min-width: 100vw;
   }
 }
@@ -96,7 +95,7 @@ margin-top: 1.5rem;
 @media screen and (min-width: 601px) and (max-width: 1200px) {
   .project__container {
     position: relative;
-    background-image: url(../assets/Background/projects_image.jpeg);
+    background-image: url(../assets/Background/project_image.jpeg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -105,7 +104,7 @@ margin-top: 1.5rem;
   }
 
   .project__mini__container {
-    top:5%;
+    top:60rem;
   }
   .project__showcase__container h1 {
     font-size: 12rem;
@@ -130,8 +129,9 @@ margin-top: 1.5rem;
     font-size: 3.5rem;
   }
 
-    .project__showcase__container h3 {
-    font-size: 2.5rem; margin-top: 3rem;
+  .project__showcase__container h3 {
+    font-size: 2.5rem;
+    margin-top: 3rem;
   }
 
   .container-dots {
@@ -141,11 +141,15 @@ margin-top: 1.5rem;
 @media screen and (min-width: 1201px) {
   .project__container {
     position: relative;
-    background-image: url(../assets/Background/projects_image.jpeg);
+    background-image: url(../assets/Background/project_image.jpeg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
     min-width: 100vw;
+  }
+
+    .project__mini__container {
+    top:20rem;
   }
 
   .project__showcase__container h1 {
@@ -168,7 +172,7 @@ margin-top: 1.5rem;
     font-size: 3rem;
   }
 
-    .project__showcase__container h3 {
+  .project__showcase__container h3 {
     margin-top: 5rem;
     font-size: 2.3rem;
   }

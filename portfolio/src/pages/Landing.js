@@ -5,6 +5,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Landing = ({handleClick}) => {
+ 
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
@@ -12,7 +13,7 @@ const Landing = ({handleClick}) => {
   return (
     <div>
       <div className="landing__container" id="section1">
-        <div className="landing__main">
+        <div className="landing__mini__container">
           <h1 data-aos="zoom-in-down">
             Luis
             <img

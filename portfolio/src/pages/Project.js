@@ -2,7 +2,6 @@ import React, {useState } from "react";
 import ByrdSong from "../assets/ProjectsCover/ByrdSong.png";
 import Link from "../assets/Logos/Link.png";
 import GitHub from "../assets/Logos/GitHub__icon.png";
-import "../style/slider.css";
 import "../style/projects.css";
 
 const Project = ({ buttonRef }) => {
@@ -19,26 +18,6 @@ const Project = ({ buttonRef }) => {
         "A simplified music streaming platform allowing users to find and listen to their favorite music with a seamless and easy to use interface.",
     },
   ];
-
-  const nextSlide = () => {
-    if (slideIndex !== projects.length) {
-      setSlideIndex(slideIndex + 1);
-    } else if (slideIndex === projects.length) {
-      setSlideIndex(1);
-    }
-  };
-
-  const prevSlide = () => {
-    if (slideIndex !== 1) {
-      setSlideIndex(slideIndex - 1);
-    } else if (slideIndex === 1) {
-      setSlideIndex(projects.length);
-    }
-  };
-
-  const moveDot = (index) => {
-    setSlideIndex(index);
-  };
 
   return (
     <section className="project__container" ref={buttonRef} id="section2">
@@ -75,9 +54,6 @@ const Project = ({ buttonRef }) => {
                     className="project__image"
                     alt={project.alt}
                   />
-                  {/* <ButtonSlide moveSlide={nextSlide} direction={"next"} />
-                  <ButtonSlide moveSlide={prevSlide} direction={"prev"} /> */}
-
                   <h2>{project.name}</h2>
                   <h3>{project.about}</h3>
                 </div>
@@ -85,15 +61,6 @@ const Project = ({ buttonRef }) => {
             </div>
           );
         })}
-
-        {/* <div className="container-dots">
-          {Array.from({ length: 2 }).map((item, index) => (
-            <div
-              onClick={() => moveDot(index + 1)}
-              className={slideIndex === index + 1 ? "dot active" : "dot"}
-            ></div>
-          ))}
-        </div> */}
       </div>
     </section>
   );
