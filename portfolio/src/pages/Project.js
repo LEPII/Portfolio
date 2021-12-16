@@ -1,7 +1,5 @@
 import React, {useState } from "react";
-import CreateCollab from "../assets/Projects/C&C.png";
-import ByrdSong from "../assets/Projects/ByrdSong.png";
-import ButtonSlide from "../components/ButtonSlider";
+import ByrdSong from "../assets/ProjectsCover/ByrdSong.png";
 import Link from "../assets/Logos/Link.png";
 import GitHub from "../assets/Logos/GitHub__icon.png";
 import "../style/slider.css";
@@ -20,15 +18,6 @@ const Project = ({ buttonRef }) => {
       about:
         "A simplified music streaming platform allowing users to find and listen to their favorite music with a seamless and easy to use interface.",
     },
-    // {
-    //   name: "Create and Collaborate",
-    //   image: CreateCollab,
-    //   alt: "Create and Collaborate",
-    //   repo: "https://github.com/LEPII/create-collaborate-v2",
-    //   link: "https://create-and-collab.herokuapp.com",
-    //   about:
-    //     "A specialized platform for people in the entertainment industry to share their work, network, and expand on their portfolio by finding their next gig!",
-    // },
   ];
 
   const nextSlide = () => {

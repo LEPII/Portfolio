@@ -107,9 +107,13 @@
     min-height: 100vh;
     min-width: 100vw;
   }
+
+  .contact__icons {
+      top: 60rem;
+
+  }
   .contact__icons img {
     margin-left: 5rem;
-    margin-top: 20rem;
   }
   .contact__container h1 {
     font-size: 15rem;
