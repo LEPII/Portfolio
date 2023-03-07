@@ -1,10 +1,20 @@
 import React, { useState } from "react";
 import "../style/navbar.css";
-import { Link } from "react-scroll";
+import { Link, useLocation } from "react-scroll";
 
 const NavBar = () => {
   const [Navbar, setNavbar] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+  const location = useLocation();
 
+  const toggleDropdown = () => {
+    setShowDropdown(!showDropdown);
+  };
+
+    const closeDropdown = () => {
+      setShowDropdown(false);
+    };
+    
   const changeBackground = () => {
     if (window.scrollY >= 60) {
       setNavbar(true);
@@ -19,30 +29,27 @@ const NavBar = () => {
     <nav className={Navbar ? "navbar__list active" : "navbar__list"}>
       <ul isDynamic={true}>
         <li>
-          <Link to="section1" smooth={true} duration={200} isDynamic={true}>
-            Home
+          <Link>Home</Link>
+        </li>
+        <li>
+          <Link>
+            <button
+              onClick={toggleDropdown}
+              className={
+                location.pathname === "/"
+                  ? "active"
+                  : ""
+              }
+            >
+              WORLD ▼
+            </button>
           </Link>
         </li>
         <li>
-          <Link to="section2" smooth={true} duration={200} isDynamic={true}>
-            Projects
-          </Link>
+          <Link>Skills</Link>
         </li>
         <li>
-          <Link to="section3" smooth={true} duration={200} isDynamic={true}
->
-            Skills
-          </Link>
-        </li>
-        <li>
-          <Link to="section4" smooth={true} duration={200} isDynamic={true}>
-            About
-          </Link>
-        </li>
-        <li>
-          <Link to="section5" smooth={true} duration={200} isDynamic={true}>
-            Contact
-          </Link>
+          <Link>Contact</Link>
         </li>
       </ul>
     </nav>

@@ -18,14 +18,23 @@ const Skills = () => {
   ];
 
   return (
-    <div className="skills__container" id="section3">
+    <div
+      className="skills__container"
+      id="section3"
+      data-aos="fade-up"
+      data-aos-duration="3000"
+    >
       <div className="skills_mini_container">
-        <h1 className="skills__header"> Skills </h1>
-        {skills.map((skill, index) => (
-          <div key={index} className="skills__list" data-aos="fade-up-right">
-            <button className="skills__button">{skill.name}</button>
-          </div>
-        ))}
+        <h1 className="skills__header">Skills</h1>
+        <div className="skills_button_container">
+          {skills.map((skill, index) => (
+            <div key={index} className="skills__list" data-aos="fade-up-left">
+              <button className="skills__button" data-aos="fade-up-left">
+                {skill.name}
+              </button>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

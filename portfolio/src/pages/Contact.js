@@ -4,21 +4,23 @@ import GitHub from "../assets/Logos/github2.png";
 import Resume from "../assets/Logos/resume.png";
 import Mail from "../assets/Logos/email.png";
 import LinkedIn from "../assets/Logos/linkedin2.png";
-import ResumeFile from "../assets/Personal/Luis's Resume 2021.pdf";
+import ResumeFile from "../assets/Personal/Resume 2023.docx";
 
 const Contact = () => {
   const contact__icons = [
     {
       src: LinkedIn,
+      name: "LinkedIn",
       link: "https://www.linkedin.com/in/luis-perez-b72069137/",
     },
     {
       src: GitHub,
+      name: "GitHub",
       link: "https://github.com/LEPII",
     },
-    { src: Mail, link: "mailto:lperezdev843@gmail.com" },
+    { src: Mail, name: "Email", link: "mailto:lperezdev843@gmail.com" },
 
-    { src: Resume, link: ResumeFile },
+    { src: Resume, name: "Resume", link: ResumeFile },
   ];
 
   return (
@@ -30,23 +32,24 @@ const Contact = () => {
       </div>
       <div className="contact__icons">
         {contact__icons.map((icon, index) => (
-          <a
-            key={index}
-            href={icon.link}
-            target="_blank"
-            rel="noreferrer"
-            data-aos="fade-up"
-            data-aos-easing="ease-out-back"
-            data-aos-delay="500"
-            data-aos-id="super-duper"
-          >
-            <img src={icon.src} alt="Contact Icons"/>  
-          </a>
+          <div className="contact_icons_images"   data-aos="fade-up"
+              data-aos-easing="ease-out-back"
+              data-aos-delay="500"
+              data-aos-id="super-duper">
+            <a
+              key={index}
+              href={icon.link}
+              target="_blank"
+              rel="noreferrer"
+           
+            >
+              <img src={icon.src} alt="Contact Icons" />
+            </a>
+            <h4 className="contact_icon_text">| {icon.name}</h4>
+          </div>
         ))}
       </div>
     </div>
   );
 };
-;
-
 export default Contact;

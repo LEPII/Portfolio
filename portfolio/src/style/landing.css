@@ -1,51 +1,56 @@
 .landing__container {
-  position: relative;
-}
-
-.landing__mini__container {
-  position: absolute;
-  top: 35rem;
-  left: 20em;
-  transform: translate(-50%, -50%);
-  min-width: 60vw;
+  display: flex;
+  flex-direction: column;  
+  align-items: center;      
   text-align: center;
-
+  justify-content: center;
+  background-color: rgb(56, 62, 77);
+  background-blend-mode: multiply;
+  background-image: url(../assets/Background/welcome__small.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;   
   cursor: default;
   letter-spacing: 0.045em;
   color: rgba(179, 183, 217, 1);
   text-shadow: -1px 0px 6px rgba(169, 178, 212, 0.77);
-
   text-shadow: 1px 0px 22px #ffffff, -2px 0px 4px rgba(152, 147, 225, 0.87);
 }
 
-.landing__mini__container h1 {
-  font-size: 6.6rem;
-  text-transform: uppercase;
-  font-weight: lighter;
-  margin-bottom: 10px;
+.landing__mini__container > * {
+  padding: 0.3em
 }
 
-.landing__mini__container img {
+.landing__mini__container {
+  width: 85%;
+}
+
+.landing__container h1 {
+  font-size: 6.6rem;
+  height: 1.5em;
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+
+.landing__container img {
   width: 5rem;
 }
 
-.landing__mini__container h2 {
+.landing__container h2 {
   font-size: 2.3rem;
   text-transform: uppercase;
-  margin-bottom: 15px;
-  width:max-content;
   letter-spacing: 0.065em;
 }
 
-.landing__mini__container h3 {
+.landing__container h3 {
   font-size: 1.6rem;
   margin-bottom: 25px;
+  
 }
 
 .landing__button {
   border-radius: 16px;
-  margin-left: 3%;
-
   cursor: pointer;
   color: whitesmoke;
   border: none;
@@ -67,31 +72,11 @@
   padding: 0.5rem;
 }
 
-@media screen and (max-width: 600px) {
-  .landing__container {
-    position: relative;
-    background-image: url(../assets/Background/welcome__small.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
-    min-width: 100vw;
-  }
-}
+
 @media screen and (min-width: 601px) and (max-width: 1200px) {
   .landing__container {
-    position: relative;
     background-image: url(../assets/Background/welcome__medium.jpeg);
-    background-size: cover;
-    background-position: right;
-    min-height: 100vh;
-    min-width: 100vw;
   }
-  .landing__mini__container {
-    top: 35%;
-    width: 90%;
-  }
-
   .landing__mini__container h1 {
     font-size: 11.5rem;
   }
@@ -111,18 +96,7 @@
 
 @media screen and (min-width: 1201px) {
   .landing__container {
-    position: relative;
     background-image: url(../assets/Background/welcome_image.jpeg);
-    background-size: cover;
-    background-position: center;
-    min-height: 100vh;
-    min-width: 100vw;
-  }
-
-  .landing__mini__container {
-    top: 45%;
-    left: 33%;
-    width: 55%;
   }
 
   .landing__mini__container h1 {
@@ -131,15 +105,12 @@
   }
 
   .landing__mini__container h2 {
-    font-size: 9.4rem;
-    margin-top: 10px;
-    margin-bottom: 35px;
-    word-spacing: 1.5rem;
+    font-size: 6.4rem;
+   word-spacing: 1.5rem;
   }
 
   .landing__mini__container h3 {
     font-size: 4rem;
-    margin-bottom: 45px;
   }
 
   .landing__mini__container img {
