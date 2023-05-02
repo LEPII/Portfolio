@@ -1,24 +1,26 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {useRef} from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Landing from "./pages/Landing";
+import Skills from "./pages/Skills";
 import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 
 const App = () => {
+  const skillsRef = useRef(null);
+
+  const handleScrollToSkills = () => {
+    skillsRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
-    <div>
-      <Router>
-        <NavBar> </NavBar>
-        <Routes>
-          <Route path="/" component={<Landing />} />
-          <Route path="/projects" component={<Project />} />
-          <Route path="/contact" component={<Contact />} />
-        </Routes>
-      </Router>
-    </div>
+    <>
+      <NavBar />
+      <Landing handleScrollToSkills={handleScrollToSkills}> </Landing>
+      <Skills skillsRef={skillsRef}> </Skills>
+      <Project> </Project>
+      <Contact> </Contact>
+    </>
   );
 };
 

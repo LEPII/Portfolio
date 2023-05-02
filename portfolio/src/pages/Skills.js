@@ -1,7 +1,7 @@
 import React from "react";
 import "../style/skills.css";
 
-const Skills = () => {
+const Skills = ({ skillsRef }) => {
   const skills = [
     { name: "Javascript" },
     { name: "HTML" },
@@ -14,29 +14,28 @@ const Skills = () => {
     { name: "GraphQL" },
     { name: "Prisma" },
     { name: "Version Control" },
-    { name: "AWS" },
+    { name: "UI-UX Design" },
+    { name: "Animations" },
   ];
 
   return (
-    <div
+    <section
       className="skills__container"
-      id="section3"
       data-aos="fade-up"
-      data-aos-duration="3000"
+      data-aos-duration="6000"
+      ref={skillsRef}
     >
-      <div className="skills_mini_container">
-        <h1 className="skills__header">Skills</h1>
-        <div className="skills_button_container">
-          {skills.map((skill, index) => (
-            <div key={index} className="skills__list" data-aos="fade-up-left">
-              <button className="skills__button" data-aos="fade-up-left">
-                {skill.name}
-              </button>
-            </div>
-          ))}
-        </div>
+      <h1 className="skills__header" data-aos="zoom-in-right">
+        Skills
+      </h1>
+      <div className="skills__list">
+        {skills.map((skill, index) => (
+          <span className="skills__button" key={index} data-aos="fade-up">
+            {skill.name}
+          </span>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

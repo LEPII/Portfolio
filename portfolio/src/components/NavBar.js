@@ -1,22 +1,12 @@
 import React, { useState } from "react";
 import "../style/navbar.css";
-import { Link, useLocation } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [Navbar, setNavbar] = useState(false);
-  const [showDropdown, setShowDropdown] = useState(false);
-  const location = useLocation();
 
-  const toggleDropdown = () => {
-    setShowDropdown(!showDropdown);
-  };
-
-    const closeDropdown = () => {
-      setShowDropdown(false);
-    };
-    
   const changeBackground = () => {
-    if (window.scrollY >= 60) {
+    if (window.scrollY >= 1) {
       setNavbar(true);
     } else {
       setNavbar(false);
@@ -26,30 +16,18 @@ const NavBar = () => {
   window.addEventListener("scroll", changeBackground);
 
   return (
-    <nav className={Navbar ? "navbar__list active" : "navbar__list"}>
-      <ul isDynamic={true}>
+    <nav >
+      <ul className={Navbar ? "navbar__list active" : "navbar__list"}>
         <li>
-          <Link>Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Link>
-            <button
-              onClick={toggleDropdown}
-              className={
-                location.pathname === "/"
-                  ? "active"
-                  : ""
-              }
-            >
-              WORLD ▼
-            </button>
+          <Link to="/">
+            Projects
           </Link>
         </li>
         <li>
-          <Link>Skills</Link>
-        </li>
-        <li>
-          <Link>Contact</Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>

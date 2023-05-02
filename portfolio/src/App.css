@@ -10,14 +10,19 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poiret One", cursive;
+  font-weight: 300;
 }
 
-body {
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
   height: 100vh;
-  background: black;
-}
-
-html {
+  background-color: black;
+  margin: 0;
+  padding: 0; 
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+

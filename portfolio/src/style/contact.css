@@ -1,7 +1,7 @@
 .contact__container {
       background-color: rgb(76, 83, 101);
         background-blend-mode: multiply;
-  background-image: url(../assets/Background/contact__small.png);
+  background-image: url(../assets/Background/contact_small.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -64,7 +64,7 @@ transform: scale(1);
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
   .contact__container {
-    background-image: url(../assets/Background/contact__medium.jpeg);
+    background-image: url(../assets/Background/contact_medium.jpeg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;
@@ -89,7 +89,7 @@ height: 50px;
 @media screen and (min-width: 1201px) {
   .contact__container {
 
-    background-image: url(../assets/Background/contact_image.jpeg);
+    background-image: url(../assets/Background/contact_large.jpeg);
     background-size: cover;
     background-position: center;
     min-height: 100vh;

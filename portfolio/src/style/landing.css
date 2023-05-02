@@ -1,36 +1,36 @@
 .landing__container {
   display: flex;
-  flex-direction: column;  
-  align-items: center;      
-  text-align: center;
+  flex-direction: column;
   justify-content: center;
-  background-color: rgb(56, 62, 77);
+  align-items: center;
+  background-color: rgba(32, 42, 71, 0.562);
   background-blend-mode: multiply;
-  background-image: url(../assets/Background/welcome__small.png);
+  background-image: url(../assets/Background/welcome_small.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 100vh;   
+  min-height: 96vh;
   cursor: default;
   letter-spacing: 0.045em;
-  color: rgba(179, 183, 217, 1);
-  text-shadow: -1px 0px 6px rgba(169, 178, 212, 0.77);
-  text-shadow: 1px 0px 22px #ffffff, -2px 0px 4px rgba(152, 147, 225, 0.87);
+  color: rgb(149, 154, 213);
+  text-shadow: 1px 0px 22px #716fe1, -2px 0px 4px rgba(65, 57, 180, 0.87);
+  text-align: center;
 }
 
 .landing__mini__container > * {
-  padding: 0.3em
+  padding: 0.7em;
 }
 
 .landing__mini__container {
-  width: 85%;
+  width: 90%;
 }
 
 .landing__container h1 {
-  font-size: 6.6rem;
-  height: 1.5em;
+  font-size: 6rem;
   text-transform: uppercase;
   font-weight: lighter;
+  padding: 0em 0.1em;
+  text-align: center;
 }
 
 .landing__container img {
@@ -38,86 +38,102 @@
 }
 
 .landing__container h2 {
-  font-size: 2.3rem;
-  text-transform: uppercase;
+  font-size: 2.5rem;
   letter-spacing: 0.065em;
+  text-align: center;
 }
 
-.landing__container h3 {
-  font-size: 1.6rem;
+.landing__container span {
+  font-size: 2rem;
   margin-bottom: 25px;
-  
 }
 
 .landing__button {
-  border-radius: 16px;
+  display: block;
   cursor: pointer;
   color: whitesmoke;
-  border: none;
-  opacity: 77%;
-  background: radial-gradient(
-    15.55% 80.88% at 34.43% 51.43%,
-    #a9a7d1 0%,
-    rgba(182, 189, 219, 0.97) 100%
+  background: linear-gradient(
+    302.36deg,
+    rgba(40, 46, 107, 0.623) 20.43%,
+    rgba(82, 71, 100, 0.725) 109.7%
   );
-  box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.5),
+  border: 0.5px solid rgba(153, 151, 255, 0.48);
+  box-shadow: -8px -5px 10px rgba(0, 0, 0, 0.25),
     0px 0px 27px rgba(85, 119, 232, 0.5);
-  mix-blend-mode: normal;
-  text-shadow: 1px 0px 22px #ffffff, -2px 0px 4px rgba(75, 64, 233, 0.87);
-  width: 15.4rem;
-  height: 3.9rem;
+  border-radius: 30px;
+  text-shadow: 1px 0px 22px #ffffff, -2px 0px 4px rgba(115, 107, 214, 0.87);
+  font-size: 2rem;
+  width: 6em;
   letter-spacing: 0.085em;
-  font-size: 2.4rem;
-  letter-spacing: 0.085em;
-  padding: 0.5rem;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 4em;
+  transition: transform 0.4s ease-in-out, filter 0.2s ease-in-out;
+
 }
 
+.landing__button:hover {
+  transform: scale(1.2);   
+  filter: brightness(1.2); 
+}
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
   .landing__container {
-    background-image: url(../assets/Background/welcome__medium.jpeg);
+    background-image: url(../assets/Background/welcome_medium.jpeg);
   }
   .landing__mini__container h1 {
-    font-size: 11.5rem;
+    font-size: 10rem;
   }
 
   .landing__mini__container h2 {
-    font-size: 4.4rem;
+    font-size: 4rem;
   }
 
-  .landing__mini__container h3 {
-    font-size: 2.4rem;
+  .landing__mini__container span {
+    font-size: 3rem;
   }
 
   .landing__mini__container img {
-    width: 7.5rem;
+    width: 8rem;
+  }
+
+  .landing__button {
+    width: 18rem;
+    height: 6rem;
+    font-size: 3rem;
+    padding: 0.7rem;
   }
 }
 
 @media screen and (min-width: 1201px) {
   .landing__container {
-    background-image: url(../assets/Background/welcome_image.jpeg);
+    background-image: url(../assets/Background/welcome_large.jpeg);
+    align-items: flex-start;
+  }
+
+  .landing__mini__container {
+    width: 50%;
+    padding-left: 10em;
   }
 
   .landing__mini__container h1 {
-    font-size: 16.5em;
-    word-spacing: -15.5rem;
+    font-size: 10rem;
   }
 
   .landing__mini__container h2 {
-    font-size: 6.4rem;
-   word-spacing: 1.5rem;
+    font-size: 5rem;
+    word-spacing: 1.5rem;
   }
 
-  .landing__mini__container h3 {
-    font-size: 4rem;
+  .landing__mini__container span {
+    font-size: 2.5rem;
   }
 
   .landing__mini__container img {
-    width: 11.5rem;
+    width: 7rem;
   }
   .landing__button {
-    width: 20.4rem;
+    width: 20rem;
     height: 5.3rem;
     font-size: 2.9rem;
     padding: 0.7rem;
