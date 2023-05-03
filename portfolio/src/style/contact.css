@@ -1,12 +1,12 @@
 .contact__container {
-      background-color: rgb(76, 83, 101);
-        background-blend-mode: multiply;
+  background-color: rgb(76, 83, 101);
+  background-blend-mode: multiply;
   background-image: url(../assets/Background/contact_small.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 100vh;
-  min-width: 100vw;  
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -18,7 +18,6 @@
     -2px -5px 16px #fff2f2;
   cursor: default;
 }
-
 
 .contact__container h1 {
   letter-spacing: 0.01em;
@@ -34,19 +33,19 @@
   font-size: 1.5rem;
 }
 
-    .contact_icons_images {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 100%;
-      height: fit-content;
-      padding-top: 10px;
-    }
+.contact_icons_images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: fit-content;
+  padding-top: 10px;
+}
 
 .contact__icons img {
-height: 50px;
-width: 55px;  
-transform: scale(1);
+  height: 50px;
+  width: 55px;
+  transform: scale(1);
   transition: 2s;
 }
 
@@ -62,6 +61,10 @@ transform: scale(1);
   font-size: 2.5em;
 }
 
+.contact__name::first-line {
+  font-family: "Poiret One", cursive;
+}
+
 @media screen and (min-width: 601px) and (max-width: 1200px) {
   .contact__container {
     background-image: url(../assets/Background/contact_medium.jpeg);
@@ -71,8 +74,8 @@ transform: scale(1);
     min-width: 100vw;
   }
   .contact__icons img {
-height: 50px;
-  width: 50px;
+    height: 50px;
+    width: 50px;
   }
   .contact__container h1 {
     font-size: 8rem;
@@ -82,13 +85,12 @@ height: 50px;
   }
 
   .contact_icon_text {
-  font-size: 2.9em;
-}
+    font-size: 2.9em;
+  }
 }
 
 @media screen and (min-width: 1201px) {
   .contact__container {
-
     background-image: url(../assets/Background/contact_large.jpeg);
     background-size: cover;
     background-position: center;
@@ -101,17 +103,16 @@ height: 50px;
   .contact__info h3 {
     font-size: 2.5rem;
   }
-.contact__icons img {
-  height: 55px;
-  width: 60px;
- 
-}
-.contact_icons_images {   
-  padding: 7px;
-}
-.contact_icon_text {
-  padding-left: 0.3em;
-  padding-top: 0.2em;
+  .contact__icons img {
+    height: 55px;
+    width: 60px;
+  }
+  .contact_icons_images {
+    padding: 7px;
+  }
+  .contact_icon_text {
+    padding-left: 0.3em;
+    padding-top: 0.2em;
     font-size: 2.9em;
-    }
+  }
 }
