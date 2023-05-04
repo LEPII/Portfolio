@@ -30,7 +30,7 @@ const Project = () => {
         return (
           <div
             className="project__card"
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-duration="6000"
           >
             <img

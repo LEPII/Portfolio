@@ -9,7 +9,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 96vh;
+  min-height: 100vh;
   cursor: default;
   letter-spacing: 0.045em;
   color: rgb(149, 154, 213);
@@ -116,13 +116,19 @@
     padding-left: 10em;
   }
 
+.landing__mini__container > * {
+  padding: 0.2em;
+}
+
+
   .landing__mini__container h1 {
-    font-size: 10rem;
+    font-size: 13rem;
   }
 
   .landing__mini__container h2 {
     font-size: 5rem;
     word-spacing: 1.5rem;
+    
   }
 
   .landing__mini__container span {
@@ -130,7 +136,7 @@
   }
 
   .landing__mini__container img {
-    width: 7rem;
+    width: 9rem;
   }
   .landing__button {
     width: 20rem;

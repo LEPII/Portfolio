@@ -25,6 +25,46 @@
   text-transform: uppercase;
 }
 
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1em;
+   border: 0.5px solid rgba(153, 151, 255, 0.48);
+     border-radius: 16px;
+  background: linear-gradient(
+    0.36deg,
+    rgba(48, 54, 122, .8) 20.43%,
+    rgba(66, 57, 81, .8) 109.7%
+  );
+  box-shadow: 0px -12px 72px rgba(112, 118, 172, 0.476);
+
+}
+
+.contact__form > * {
+  margin: 2em;
+}
+
+.contact__submit {
+  margin-left: auto;
+    display: block;
+  cursor: pointer;
+  color: whitesmoke;
+  background: linear-gradient(
+    302.36deg,
+    rgba(40, 46, 107, 0.623) 20.43%,
+    rgba(82, 71, 100, 0.725) 109.7%
+  );
+  border: 0.5px solid rgba(153, 151, 255, 0.48);
+  box-shadow: -8px -5px 10px rgba(0, 0, 0, 0.25),
+    0px 0px 27px rgba(85, 119, 232, 0.5);
+  border-radius: 30px;
+  text-shadow: 1px 0px 22px #ffffff, -2px 0px 4px rgba(115, 107, 214, 0.87);
+  font-size: 2rem;
+  width: 6em;
+  letter-spacing: 0.085em;
+}
+
 .contact__info h3 {
   letter-spacing: 0.04em;
   margin: 1em 0rem;
@@ -33,37 +73,8 @@
   font-size: 1.5rem;
 }
 
-.contact_icons_images {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  height: fit-content;
-  padding-top: 10px;
-}
 
-.contact__icons img {
-  height: 50px;
-  width: 55px;
-  transform: scale(1);
-  transition: 2s;
-}
 
-.contact__icons img:hover {
-  transform: scale(1.5);
-  cursor: pointer;
-}
-
-.contact__icons a {
-  height: 40px;
-}
-.contact_icon_text {
-  font-size: 2.5em;
-}
-
-.contact__name::first-line {
-  font-family: "Poiret One", cursive;
-}
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
   .contact__container {
@@ -98,7 +109,7 @@
     min-width: 100vw;
   }
   .contact__container h1 {
-    font-size: 15rem;
+    font-size: 13rem;
   }
   .contact__info h3 {
     font-size: 2.5rem;

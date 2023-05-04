@@ -100,7 +100,7 @@ cursor: default;
     top: 1.5em;
 
 left: 20%;
-    font-size: 10rem;
+    font-size: 13rem;
   }
 
   .skills__list {
@@ -109,6 +109,6 @@ left: 30%;
   }
 
   .skills__button {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }

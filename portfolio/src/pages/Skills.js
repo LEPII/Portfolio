@@ -21,8 +21,9 @@ const Skills = ({ skillsRef }) => {
   return (
     <section
       className="skills__container"
-      data-aos="fade-up"
+      data-aos="fade-right"
       data-aos-duration="6000"
+      data-aos-delay="500"
       ref={skillsRef}
     >
       <h1 className="skills__header" data-aos="zoom-in-right">
@@ -30,7 +31,12 @@ const Skills = ({ skillsRef }) => {
       </h1>
       <div className="skills__list">
         {skills.map((skill, index) => (
-          <span className="skills__button" key={index} data-aos="fade-up">
+          <span
+            className="skills__button"
+            key={index}
+            data-aos="fade-up-left"
+            data-aos-delay="800"
+          >
             {skill.name}
           </span>
         ))}
