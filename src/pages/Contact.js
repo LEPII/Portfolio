@@ -1,52 +1,88 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../style/contact.css";
-import { useForm } from "react-hook-form";
+import emailjs from "@emailjs/browser";
+import GitHub from "../assets/Logos/github.png";
+import LinkedIn from "../assets/Logos/linkedin.png";
 
-const Contact = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
+const Contact = ({envVars}) => {
+  const form = useRef();
 
-  const onSubmit = (data) => console.log(data);
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(envVars.emailKey, envVars.tempKey, form.current, envVars.pubKey)
+      .then(
+        (result) => {
+          console.log(result.text);
+          e.target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
+  const contact__icons = [
+    {
+      src: LinkedIn,
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/luis-perez-b72069137/",
+    },
+    {
+      src: GitHub,
+      name: "GitHub",
+      link: "https://github.com/LEPII",
+    },
+  ];
 
   return (
     <div className="contact__container" id="section5">
       <div className="contact__info">
         <h1> Contact </h1>
-        <span>lperezdev843@gmail.com</span>
-
-        <form onSubmit={handleSubmit(onSubmit)} className="contact__form">
-          <p> Full Name</p>
+        <p>
+          Whether you're a fellow Miami Heat/Dolphins fan, a hiring manager,
+          recruiter, business owner, or blockchain enthusiast/developer, I'm
+          eager to connect with you! 
+          
+          <br />
+          
+          As a web developer, I'm always looking for
+          exciting new projects and collaborations. So, if you have a web
+          development project in mind, or just want to chat about our shared
+          interests, feel free to reach out to me via email, or connect with me
+          on LinkedIn or Github.
+        </p>
+        
+        <form ref={form} onSubmit={sendEmail} className="contact__form">
+     <span>lperezdev843@gmail.com</span>
+          <div className="contact__icons">
+            {contact__icons.map((icon, index) => (
+              <a key={index} href={icon.link} target="_blank" rel="noreferrer">
+                <img src={icon.src} alt="Contact Icons" />
+              </a>
+            ))}
+          </div>       <label> FULL NAME </label>
           <input
             className="contact__name"
-            autoComplete="new-password"
-            {...register("fullName", { required: true, maxLength: 20 })}
+            autoComplete="John Doe"
+            name="to_name"
+            type="text"
+            required
           />
-          {errors.fullName?.type === "required" && (
-            <p role="alert">Full Name Is Required</p>
-          )}
-          <p> Email </p>
 
+          <label> EMAIL </label>
           <input
-            autoComplete="new-password"
-            {...register("email", {
-              required: true,
-              pattern: "^[^s@]+@[^s@]+.[^s@]+$",
-            })}
+            autoComplete="johndoe@gmail.com"
+            type="email"
+            name="from_email"
+            required
           />
-          {errors.email?.type === "required" && (
-            <p role="alert">Email Is Required</p>
-          )}
-          <p> Message </p>
 
-          <input {...register("message", { required: true })} />
-          {errors.message?.type === "required" && (
-            <p role="alert">Message Is Required</p>
-          )}
-          <input type="submit" className="contact__submit"/>
+          <label> MESSAGE </label>
+          <input type="textbox" name="message" required autoComplete="off"/>
+      
+          <input type="submit" value="Send" className="contact__submit" />  
         </form>
       </div>
     </div>
@@ -55,20 +91,5 @@ const Contact = () => {
 
 export default Contact;
 
-// import GitHub from "../assets/Logos/github2.png";
-// import Mail from "../assets/Logos/email.png";
-// import LinkedIn from "../assets/Logos/linkedin2.png";
 
-// const contact__icons = [
-//   {
-//     src: LinkedIn,
-//     name: "LinkedIn",
-//     link: "https://www.linkedin.com/in/luis-perez-b72069137/",
-//   },
-//   {
-//     src: GitHub,
-//     name: "GitHub",
-//     link: "https://github.com/LEPII",
-//   },
-//   { src: Mail, name: "Email", link: "mailto:lperezdev843@gmail.com" }
-// ] ;
+

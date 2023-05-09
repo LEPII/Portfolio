@@ -6,7 +6,15 @@ import Skills from "./pages/Skills";
 import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 
+const envVars = {
+  emailKey: process.env.REACT_APP_EMAIL_KEY,
+  tempKey: process.env.REACT_APP_TEMP,
+  pubKey: process.env.REACT_APP_PUB,
+};
 const App = () => {
+
+  
+
   const skillsRef = useRef(null);
 
   const handleScrollToSkills = () => {
@@ -19,7 +27,7 @@ const App = () => {
       <Landing handleScrollToSkills={handleScrollToSkills}> </Landing>
       <Skills skillsRef={skillsRef}> </Skills>
       <Project> </Project>
-      <Contact> </Contact>
+      <Contact envVars={envVars}> </Contact>
     </>
   );
 };

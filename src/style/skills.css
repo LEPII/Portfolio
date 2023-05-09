@@ -52,7 +52,7 @@
   width: fit-content;
   letter-spacing: 0.085em;
   padding: 1.3rem;
-  color: whitesmoke;
+    color: rgb(195, 198, 222);
 cursor: default;
   transition: transform 0.4s ease-in-out, filter 0.2s ease-in-out;
 }

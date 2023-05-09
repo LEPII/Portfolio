@@ -1,11 +1,11 @@
 .contact__container {
-  background-color: rgb(76, 83, 101);
+  background-color: rgb(38, 39, 41);
   background-blend-mode: multiply;
   background-image: url(../assets/Background/contact_small.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 100vh;
+  min-height: fit-content;
   min-width: 100vw;
   display: flex;
   flex-direction: column;
@@ -13,16 +13,21 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: whitesmoke;
-  text-shadow: 0px 4px 25px rgb(65, 65, 65), 0px 4px 26px #ffffff,
-    -2px -5px 16px #fff2f2;
+  color: rgb(195, 198, 222);
+  padding-top: 20em;
   cursor: default;
 }
 
+.contact__info p {
+  font-size: 2rem;
+  text-align: left;
+  padding: 2em;
+}
 .contact__container h1 {
-  letter-spacing: 0.01em;
+  letter-spacing: 0.15em;
   font-size: 5rem;
   text-transform: uppercase;
+  text-shadow: 1px 0px 22px #716fe1, -2px 0px 4px rgba(65, 57, 180, 0.87);
 }
 
 .contact__form {
@@ -30,24 +35,54 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 1em;
-   border: 0.5px solid rgba(153, 151, 255, 0.48);
-     border-radius: 16px;
   background: linear-gradient(
     0.36deg,
-    rgba(48, 54, 122, .8) 20.43%,
-    rgba(66, 57, 81, .8) 109.7%
+    rgb(48, 54, 122) 20.43%,
+    rgb(66, 57, 81) 109.7%
   );
   box-shadow: 0px -12px 72px rgba(112, 118, 172, 0.476);
-
+  font-size: 2rem;
 }
 
 .contact__form > * {
-  margin: 2em;
+  margin: 0.5em;
+    letter-spacing: 0.07em;
+
+}
+
+.contact__form label {
+font-size: 1.5rem;
+}
+
+
+.contact__form input {
+  background-color: rgba(255, 255, 255, 0.112);
+  border: 0.5px solid rgba(153, 151, 255, 0.48);
+  width: 80vw;
+  height: 30px;
+  color: whitesmoke;
+}
+
+.contact__form input:focus {
+  background-color: rgba(245, 245, 245, 0);
+}
+
+.contact__icons {
+  display: flex;
+}
+
+.contact__icons img {
+  margin: 0.5em 0.5em;
+  width: 40px;
+}
+
+.contact__icons a:nth-of-type(2) {
+  margin-left: 40px;
 }
 
 .contact__submit {
   margin-left: auto;
-    display: block;
+  display: block;
   cursor: pointer;
   color: whitesmoke;
   background: linear-gradient(
@@ -58,10 +93,11 @@
   border: 0.5px solid rgba(153, 151, 255, 0.48);
   box-shadow: -8px -5px 10px rgba(0, 0, 0, 0.25),
     0px 0px 27px rgba(85, 119, 232, 0.5);
-  border-radius: 30px;
+  border-radius: 16px;
   text-shadow: 1px 0px 22px #ffffff, -2px 0px 4px rgba(115, 107, 214, 0.87);
   font-size: 2rem;
-  width: 6em;
+  max-width: 6em;
+margin: 40px auto;
   letter-spacing: 0.085em;
 }
 
@@ -72,9 +108,6 @@
   transform: matrix(1, 0, 0.01, 1, 0, 0);
   font-size: 1.5rem;
 }
-
-
-
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
   .contact__container {

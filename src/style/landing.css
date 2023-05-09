@@ -12,7 +12,7 @@
   min-height: 100vh;
   cursor: default;
   letter-spacing: 0.045em;
-  color: rgb(149, 154, 213);
+    color: rgb(195, 198, 222);
   text-shadow: 1px 0px 22px #716fe1, -2px 0px 4px rgba(65, 57, 180, 0.87);
   text-align: center;
 }
@@ -31,6 +31,7 @@
   font-weight: lighter;
   padding: 0em 0.1em;
   text-align: center;
+
 }
 
 .landing__container img {
@@ -46,6 +47,7 @@
 .landing__container span {
   font-size: 2rem;
   margin-bottom: 25px;
+  
 }
 
 .landing__button {

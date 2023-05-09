@@ -3,6 +3,9 @@ import ReactDOM from "react-dom";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import ErrorPage from "./components/ErrorPage";
+import dotenv from "dotenv";
+dotenv.config();
+
 
 const router = createBrowserRouter([
   {
