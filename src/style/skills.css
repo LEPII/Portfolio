@@ -97,18 +97,21 @@ cursor: default;
   }
 
   .skills__container h1 {
-    top: 1.5em;
+    top: 1.2em;
 
 left: 20%;
     font-size: 13rem;
   }
 
   .skills__list {
-width: 55%;
+width: 50%;
 left: 30%;
   }
 
   .skills__button {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
+
+
+
 }

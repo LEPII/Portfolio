@@ -1,6 +1,7 @@
 import React from "react";
-import HodWiki from "../assets/ProjectsCover/e.png";
+import HodWiki from "../assets/ProjectsCover/hod.png";
 import "../style/projects.css";
+import { HashLink } from "react-router-hash-link";
 
 const Project = () => {
   
@@ -18,7 +19,7 @@ const Project = () => {
   ];
 
   return (
-    <section className="project__container">
+    <section className="project__container" id="pro_top">
       <h1
         className="project__header"
         data-aos="zoom-out-up"
@@ -78,7 +79,9 @@ const Project = () => {
           I'd love to discuss anything from consultation, partnership
           opportunities, Web3 and Blockchain, or just say hi!
         </span>
-        <button className="convo__button"> Start a Conversation </button>
+        <HashLink to="/contact/#top">
+          <button className="convo__button"> Start a Conversation </button>
+        </HashLink>
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../style/navbar.css";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const NavBar = () => {
   const [Navbar, setNavbar] = useState(false);
@@ -16,18 +16,16 @@ const NavBar = () => {
   window.addEventListener("scroll", changeBackground);
 
   return (
-    <nav >
+    <nav>
       <ul className={Navbar ? "navbar__list active" : "navbar__list"}>
         <li>
-          <Link to="/">Home</Link>
+          <HashLink to="/#home_top">Home</HashLink>
         </li>
         <li>
-          <Link to="/">
-            Projects
-          </Link>
+          <HashLink to="/#pro_top">Projects</HashLink>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+               <HashLink to="/contact/#top"> Contact </HashLink>
         </li>
       </ul>
     </nav>

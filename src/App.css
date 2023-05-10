@@ -9,8 +9,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Poiret One", cursive;
-  font-weight: 300;
+font-family: 'Poppins', sans-serif;  font-weight: 200;
 }
 
 *, *::before, *::after {
@@ -26,3 +25,12 @@ html, body {
   scroll-behavior: smooth;
 }
 
+h1, button {
+  font-family: "Poiret One", cursive;
+  font-weight: 300;
+}
+
+
+a {
+    text-decoration: none;
+}

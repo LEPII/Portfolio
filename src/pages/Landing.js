@@ -3,15 +3,18 @@ import Ship from "../assets/Logos/Ship.png";
 import "../style/landing.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import Skills from "./Skills";
+import Project from "./Project";
 
-const Landing = ({ handleScrollToSkills }) => {
+const Landing = ({ handleScrollToSkills, skillsRef }) => {
+
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
 
   return (
     <div>
-      <div className="landing__container" data-aos="zoom-out">
+      <div className="landing__container" data-aos="zoom-out" id="home_top">
         <div className="landing__mini__container">
           <h1 data-aos="zoom-in-down">
             LuDev
@@ -38,6 +41,8 @@ const Landing = ({ handleScrollToSkills }) => {
           </button>
         </div>
       </div>
+      <Skills skillsRef={skillsRef}> </Skills>
+      <Project> </Project>
     </div>
   );
 };

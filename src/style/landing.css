@@ -12,7 +12,7 @@
   min-height: 100vh;
   cursor: default;
   letter-spacing: 0.045em;
-    color: rgb(195, 198, 222);
+  color: rgb(149, 154, 213);
   text-shadow: 1px 0px 22px #716fe1, -2px 0px 4px rgba(65, 57, 180, 0.87);
   text-align: center;
 }
@@ -31,7 +31,6 @@
   font-weight: lighter;
   padding: 0em 0.1em;
   text-align: center;
-
 }
 
 .landing__container img {
@@ -45,9 +44,8 @@
 }
 
 .landing__container span {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 25px;
-  
 }
 
 .landing__button {
@@ -71,12 +69,11 @@
   margin-top: 2em;
   margin-bottom: 4em;
   transition: transform 0.4s ease-in-out, filter 0.2s ease-in-out;
-
 }
 
 .landing__button:hover {
-  transform: scale(1.2);   
-  filter: brightness(1.2); 
+  transform: scale(1.2);
+  filter: brightness(1.2);
 }
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
@@ -118,10 +115,9 @@
     padding-left: 10em;
   }
 
-.landing__mini__container > * {
-  padding: 0.2em;
-}
-
+  .landing__mini__container > * {
+    padding: 0.2em;
+  }
 
   .landing__mini__container h1 {
     font-size: 13rem;
@@ -130,7 +126,6 @@
   .landing__mini__container h2 {
     font-size: 5rem;
     word-spacing: 1.5rem;
-    
   }
 
   .landing__mini__container span {

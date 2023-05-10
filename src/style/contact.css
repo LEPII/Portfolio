@@ -5,29 +5,39 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: fit-content;
-  min-width: 100vw;
+  max-height:max-content;
+  max-width: 100vw;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: rgb(195, 198, 222);
+  color: rgb(149, 154, 213);
+  text-shadow: 1px 0px 22px #716fe1, -2px 0px 4px rgba(65, 57, 180, 0.87);
   padding-top: 20em;
   cursor: default;
 }
 
+.contact__container > * {
+  max-width: 100vw;
+} 
+
 .contact__info p {
   font-size: 2rem;
   text-align: left;
-  padding: 2em;
+  padding: 1em;
 }
+
+.contact__info p:nth-of-type(2) {
+  margin-bottom: 30px;
+}
+
 .contact__container h1 {
   letter-spacing: 0.15em;
-  font-size: 5rem;
+  font-size: 7rem;
   text-transform: uppercase;
-  text-shadow: 1px 0px 22px #716fe1, -2px 0px 4px rgba(65, 57, 180, 0.87);
+  margin-bottom: 30px;
 }
 
 .contact__form {
@@ -37,8 +47,8 @@
   padding: 1em;
   background: linear-gradient(
     0.36deg,
-    rgb(48, 54, 122) 20.43%,
-    rgb(66, 57, 81) 109.7%
+    rgb(48, 54, 122, 0.95) 20.43%,
+    rgba(17, 16, 21, 0.95) 109.7%
   );
   box-shadow: 0px -12px 72px rgba(112, 118, 172, 0.476);
   font-size: 2rem;
@@ -47,7 +57,20 @@
 .contact__form > * {
   margin: 0.5em;
     letter-spacing: 0.07em;
+}
 
+.contact_location {
+font-size: 2rem;
+text-align: left;
+}
+
+.contact__form a {
+  font-size: 2rem;
+   color: rgb(195, 198, 222);
+}
+
+.contact__form a:visited {
+  font-style: none;
 }
 
 .contact__form label {
@@ -61,9 +84,27 @@ font-size: 1.5rem;
   width: 80vw;
   height: 30px;
   color: whitesmoke;
+    padding: 0.5em;
+}
+
+.contact__form input:nth-of-type(3) {
+  height: fit-content;
 }
 
 .contact__form input:focus {
+  background-color: rgba(245, 245, 245, 0);
+}
+
+.contact__form textarea {
+  background-color: rgba(255, 255, 255, 0.112);
+  border: 0.5px solid rgba(153, 151, 255, 0.48);
+  padding: 0.5em;
+  width: 80vw;
+  height: 100px;
+  color: whitesmoke;
+}
+
+.contact__form textarea:focus {
   background-color: rgba(245, 245, 245, 0);
 }
 
@@ -81,7 +122,6 @@ font-size: 1.5rem;
 }
 
 .contact__submit {
-  margin-left: auto;
   display: block;
   cursor: pointer;
   color: whitesmoke;
@@ -97,8 +137,14 @@ font-size: 1.5rem;
   text-shadow: 1px 0px 22px #ffffff, -2px 0px 4px rgba(115, 107, 214, 0.87);
   font-size: 2rem;
   max-width: 6em;
-margin: 40px auto;
+margin: 20px auto;
   letter-spacing: 0.085em;
+    transition: transform 0.4s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.contact__submit:hover {
+    transform: scale(1.2);   
+  filter: brightness(1.2); 
 }
 
 .contact__info h3 {
@@ -118,19 +164,28 @@ margin: 40px auto;
     min-width: 100vw;
   }
   .contact__icons img {
-    height: 50px;
     width: 50px;
   }
   .contact__container h1 {
-    font-size: 8rem;
+    font-size: 10rem;
   }
-  .contact__container h3 {
-    font-size: 2rem;
+  .contact__container p {
+    font-size: 3rem;
   }
 
-  .contact_icon_text {
-    font-size: 2.9em;
-  }
+.contact__submit {
+   width: 18rem;
+    height: 6rem;
+    font-size: 3rem;
+    padding: 0.7rem;}
+}
+
+.contact__form label {
+font-size: 2.5rem;
+}
+
+.contact__form span {
+  font-size: 3rem;
 }
 
 @media screen and (min-width: 1201px) {
@@ -141,22 +196,53 @@ margin: 40px auto;
     min-height: 100vh;
     min-width: 100vw;
   }
+
+  .contact__form {
+    padding: 2em;
+  }
   .contact__container h1 {
     font-size: 13rem;
   }
   .contact__info h3 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
+
+    .contact__container p {
+      margin-top: 2em;
+      margin-left: 3em;
+    font-size: 4.5rem;
+    width: 50%;
+  }
+
+     .contact__container p:nth-of-type(2) {
+    font-size: 5rem;
+    width: 50%;
+    margin-left: auto;
+      margin-right: 3em;
+    text-align: right;
+  }
+  
   .contact__icons img {
-    height: 55px;
     width: 60px;
   }
-  .contact_icons_images {
-    padding: 7px;
-  }
-  .contact_icon_text {
-    padding-left: 0.3em;
-    padding-top: 0.2em;
-    font-size: 2.9em;
-  }
+ 
+  .contact__submit {
+    font-size: 2.5rem;
+    margin-left: 0.5em;
+    margin-top: 2em;
+    padding: 1rem;}
+
+.contact__form input {
+  width: 50vw;
+}
+
+.contact__form textarea {
+  width: 50vw;
+}
+
+.contact__info p:nth-of-type(2) {
+  margin-bottom: 2em;
+}
+
+
 }
