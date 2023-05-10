@@ -14,7 +14,7 @@ const Landing = ({ handleScrollToSkills, skillsRef }) => {
 
   return (
     <div>
-      <div className="landing__container" data-aos="zoom-out" id="home_top">
+      <div className="landing__container" id="home_top">
         <div className="landing__mini__container">
           <h1 data-aos="zoom-in-down">
             LuDev

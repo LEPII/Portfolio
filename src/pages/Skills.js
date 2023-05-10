@@ -21,7 +21,7 @@ const Skills = ({ skillsRef }) => {
   return (
     <section
       className="skills__container"
-      data-aos="fade-right"
+      data-aos="fade-up"
       data-aos-duration="6000"
       data-aos-delay="500"
       ref={skillsRef}
@@ -34,7 +34,7 @@ const Skills = ({ skillsRef }) => {
           <span
             className="skills__button"
             key={index}
-            data-aos="fade-up-left"
+            data-aos="fade-up"
             data-aos-delay="800"
           >
             {skill.name}

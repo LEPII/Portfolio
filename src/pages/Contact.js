@@ -53,7 +53,7 @@ const Contact = ({ envVars }) => {
             recruiter, business owner, or blockchain enthusiast/developer, I'm
             eager to connect with you!
           </p>
-          <p data-aos="fade-left">
+          <p data-aos="fade-up">
             As a web developer, I'm always looking for exciting new projects to
             collaborate on. So, if you have a web development project in mind,
             or just want to chat about our shared interests, feel free to reach
