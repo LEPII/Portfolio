@@ -45,9 +45,9 @@ const Contact = ({ envVars }) => {
   return (
     <>
       <NavBar />
-      <div className="contact__container" id="top">
-        <div className="contact__info">
-          <h1> Contact </h1>
+      <div className="contact__container" id="top"> 
+        <div className="contact__info" >
+          <h1 > Contact </h1>
           <p data-aos="fade-right">
             Whether you're a fellow Miami Heat/Dolphins fan, a hiring manager,
             recruiter, business owner, or blockchain enthusiast/developer, I'm

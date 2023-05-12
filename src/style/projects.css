@@ -218,7 +218,7 @@ transform: scale(1.2);
   }
 
   .project__card {
-    max-width: 22vw;
+    width:30vw;
   }
 
 .project__image {
