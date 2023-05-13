@@ -1,4 +1,4 @@
-.nav {
+.navbar {
   position: fixed;
   top: 0;
   width: 100%;
@@ -7,15 +7,16 @@
   flex-wrap: wrap;
   align-items: flex-end;
   z-index: 99;
-  padding-top: 5em;
+  padding-top: 5em;  
+  color: whitesmoke;
+
 }
 
-.nav > * {
-  margin: 1em 5em;
+.navbar > * {
+  margin: 0.1em 2em;
 }
 
-
-.nav.open {
+.navbar.open {
   background: linear-gradient(
     0.36deg,
     rgb(48, 54, 122) 20.43%,
@@ -23,28 +24,25 @@
   );
 }
 
-.burger-bar {
+.navbar.open > div > div > * {
   width: 7.5em;
   height: 0.3em;
-  padding: 0.3em;
+  padding: 0.2em;
   background-color: rgb(163, 162, 231);
   border-radius: 0.5em;
 }
 
-.menu {
-  color: whitesmoke;
-}
 
 /* ------------- sliding menu ------------------ */
-.hidden {
+/* .navbar.closed {
   display: none;
-}
+} */
 
-.visible li {
+.navar ul li {
   transform: translateX(0%);
 }
 
-.menu.visible {
+.navbar.open ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -56,61 +54,63 @@
   list-style-type: none;
 }
 
-.menu.visible > * {
+.navbar.open > * {
   padding: 1em;
 }
 
-.menu li a {
+.navbar ul li a {
   cursor: pointer;
   color: rgb(193, 195, 221);
   text-shadow: 1px 0px 22px #716fe1, -2px 0px 4px rgba(65, 57, 180, 0.87);
 }
 
-.menu li a:hover {
+.navbar ul li a:hover {
   transform: scale(1.1) translateZ(0);
   font-size: 5.1rem;
   filter: brightness(1.1);
 }
 
-.menu li a:visited {
+.navbar ul li a:visited {
   color: rgb(169, 175, 236);
   text-shadow: 1px 0px 22px #716fe1, -2px 0px 4px rgba(65, 57, 180, 0.87);
 }
 
-.menu :nth-child(2) {
+.navbar ul:nth-child(2) {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 /* ----- animations--------- */
 /* clicked */
-.burger-bar.clicked:nth-child(1) {
+.navbar.open > div > div:nth-child(1) {
   transform: rotate(45deg) translate(1em, 1em);
   transition: ease-out 0.5s;
 }
 
-.burger-bar.clicked:nth-child(2) {
+.navbar.open > div > div:nth-child(2) {
   transform: scale(0);
   transition: ease-out 0.5s;
 }
 
-.burger-bar.clicked:nth-child(3) {
+.navbar.open > div > div:nth-child(3) {
   transform: rotate(135deg) translate(0em, 0em);
   transition: ease-out 0.5s;
 }
 
 /* unclicked */
-.burger-bar.unclicked {
+.navbar.closed > div > div {
   transform: rotate(0) translate(0);
   transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) ease-out 0.5s;
   margin: 2em;
 }
 
 @media screen and (min-width: 1201px) {
-.nav { right: 0%;   transition: right 0.2s ease; 
-}
+  .navbar {
+    right: 0%;
+    transition: right 0.2s ease;
+  }
 
-  .nav.open {
+  .navbar.open {
     max-width: 25vw;
   }
 }

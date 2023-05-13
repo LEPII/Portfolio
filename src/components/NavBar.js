@@ -1,36 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../style/navbar2.css";
 import { HashLink } from "react-router-hash-link";
 
 const NavBar = () => {
-  const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
-  const [menu_class, setMenuClass] = useState("menu hidden");
-  const [isNavClicked, setIsNavClicked] = useState("nav closed")
-  const [isMenuClicked, setIsMenuClicked] = useState(false);
+  const [navbar, setNavbar] = useState(false);
 
-  // toggle burger menu change
-  const updateMenu = () => {
-    if (!isMenuClicked) {
-      setBurgerClass("burger-bar clicked");
-      setIsNavClicked("nav open")
-      setMenuClass("menu visible");
-    } else {
-      setBurgerClass("burger-bar unclicked");
-      setIsNavClicked("nav closed");
-      setMenuClass("menu hidden");
-    }
-    setIsMenuClicked(!isMenuClicked);
+
+  const handleClick = () => {
+    setNavbar(!navbar);
   };
+
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY >= 60) {
+  //       setNavbar(true);
+  //     } else {
+  //       setNavbar(false);
+  //     }
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <>
-      <nav className={isNavClicked} onClick={updateMenu}>
+      <nav
+        className={navbar ? "navbar open" : "navbar closed"}
+        onClick={handleClick}
+      >
         <div>
-          <div className={burger_class}></div>
-          <div className={burger_class}></div>
-          <div className={burger_class}></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </div>
-        <ul className={menu_class}>
+        <ul >
           <li>
             <HashLink to="/#home_top">HOME</HashLink>
           </li>
