@@ -24,9 +24,8 @@ const Skills = ({ skillsRef }) => {
       data-aos="fade-up"
       data-aos-duration="6000"
       data-aos-delay="500"
-      ref={skillsRef}
     >
-      <h1 className="skills__header" data-aos="zoom-in-right">
+      <h1 className="skills__header" data-aos="zoom-in-right" ref={skillsRef}>
         Skills
       </h1>
       <div className="skills__list">

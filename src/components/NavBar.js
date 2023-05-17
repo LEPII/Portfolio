@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../style/navbar2.css";
+import "../style/navbar.css";
 import { HashLink } from "react-router-hash-link";
 
 const NavBar = () => {
@@ -32,20 +32,20 @@ const NavBar = () => {
         className={navbar ? "navbar open" : "navbar closed"}
         onClick={handleClick}
       >
-        <div>
+        <div className="burger_bars">
           <div></div>
           <div></div>
           <div></div>
         </div>
-        <ul >
+        <ul>
           <li>
-            <HashLink to="/#home_top">HOME</HashLink>
+            <HashLink to="/#home_top">&lt; Home &#47;&gt;</HashLink>
           </li>
           <li>
-            <HashLink to="/#pro_top">PROJECTS</HashLink>
+            <HashLink to="/#pro_top">&lt; Projects &#47;&gt;</HashLink>
           </li>
           <li>
-            <HashLink to="/contact/#top"> CONTACT </HashLink>
+            <HashLink to="/contact/#top">&lt; Contact &#47;&gt;</HashLink>
           </li>
         </ul>
       </nav>

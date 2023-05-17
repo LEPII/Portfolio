@@ -27,12 +27,13 @@ const Project = () => {
       >
         PROJECTS
       </h1>
-      {projects.map((project) => {
+      {projects.map((project, index) => {
         return (
           <div
             className="project__card"
             data-aos="fade-up"
             data-aos-duration="6000"
+            key={index}
           >
             <img
               src={project.image}
@@ -42,10 +43,10 @@ const Project = () => {
             <div className="project__card__body">
               <h2> {project.name}</h2>
               <div className="project__skills">
-                {project.skills.map((skills) => {
+                {project.skills.map((skills, index) => {
                   return (
                     <>
-                      <span className="project__skill">{skills}</span>
+                      <span className="project__skill" key={index}>{skills}</span>
                     </>
                   );
                 })}
@@ -75,10 +76,10 @@ const Project = () => {
       })}
       <div className="project__contact">
         <h2> Interested In collaborating? </h2>
-        <span>
+        <p>
           I'd love to discuss anything from consultation, partnership
           opportunities, Web3 and Blockchain, or just say hi!
-        </span>
+        </p>
         <HashLink to="/contact/#top">
           <button className="convo__button"> Start a Conversation </button>
         </HashLink>

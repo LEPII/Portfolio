@@ -6,9 +6,18 @@ import Landing from "./pages/Landing";
  
 const App = () => {
   const skillsRef = useRef(null);
+  const scrollOffset = 200;
 
-  const handleScrollToSkills = () => {
-    skillsRef.current.scrollIntoView({ behavior: "smooth" });
+  const handleScroll = () => {
+    const targetPosition =
+      skillsRef.current.getBoundingClientRect().top +
+      window.pageYOffset -
+      scrollOffset;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth",
+    });
   };
 
 
@@ -16,8 +25,10 @@ const App = () => {
   return (
     <>
       <NavBar />
-      <Landing handleScrollToSkills={handleScrollToSkills} skillsRef={skillsRef}>
-      </Landing>
+      <Landing
+        handleScrollToSkills={handleScroll}
+        skillsRef={skillsRef}
+      ></Landing>
     </>
   );
 };

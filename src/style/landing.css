@@ -31,6 +31,7 @@
   font-weight: lighter;
   padding: 0em 0.1em;
   text-align: center;
+  display: inline-block;
 }
 
 .landing__container img {
@@ -43,9 +44,11 @@
   text-align: center;
 }
 
-.landing__container span {
-  font-size: 1.8rem;
+.landing__container p {
+  font-size: 1.5rem;
   margin-bottom: 25px;
+    letter-spacing: 0.045em;
+
 }
 
 .landing__button {
@@ -81,25 +84,25 @@
     background-image: url(../assets/Background/welcome_medium.jpeg);
   }
   .landing__mini__container h1 {
-    font-size: 10rem;
+    font-size: 8rem;
   }
 
   .landing__mini__container h2 {
-    font-size: 4rem;
-  }
-
-  .landing__mini__container span {
     font-size: 3rem;
   }
 
+  .landing__mini__container p {
+    font-size: 2rem;
+  }
+
   .landing__mini__container img {
-    width: 8rem;
+    width: 6rem;
   }
 
   .landing__button {
     width: 18rem;
     height: 6rem;
-    font-size: 3rem;
+    font-size: 2.5rem;
     padding: 0.7rem;
   }
 }
@@ -128,7 +131,7 @@
     word-spacing: 1.5rem;
   }
 
-  .landing__mini__container span {
+  .landing__mini__container p {
     font-size: 2.5rem;
   }
 
@@ -138,7 +141,7 @@
   .landing__button {
     width: 20rem;
     height: 5.3rem;
-    font-size: 2.9rem;
+    font-size: 3rem;
     padding: 0.7rem;
   }
 }
