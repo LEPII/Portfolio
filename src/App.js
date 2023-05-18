@@ -1,9 +1,8 @@
-import {useRef} from "react";
+import { useRef } from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Landing from "./pages/Landing";
 
- 
 const App = () => {
   const skillsRef = useRef(null);
   const scrollOffset = 200;
@@ -19,8 +18,6 @@ const App = () => {
       behavior: "smooth",
     });
   };
-
-
 
   return (
     <>

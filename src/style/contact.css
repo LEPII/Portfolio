@@ -19,9 +19,6 @@
   cursor: default;
 }
 
-.contact__container::before {  color: #00ff04; /* First layer color */
-  text-shadow: 2px 2px 0px #00ff00; /* First layer shadow */}
-
 .contact__container > * {
   max-width: 100vw;
 }
@@ -41,8 +38,6 @@
   font-size: 7rem;
   text-transform: uppercase;
   margin-bottom: 30px;
-    text-shadow: 1px 0px 22px #eb99e0, -2px 0px 4px rgba(130, 166, 232, 0.972);
-
 }
 
 .contact__form {
@@ -50,12 +45,12 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 1em;
-   background: linear-gradient(
+  background: linear-gradient(
     0.36deg,
     rgba(116, 125, 223, 0.171) 109.7%,
     rgba(190, 183, 240, 0.1) 20.43%
   );
-   backdrop-filter: blur(15px); 
+  backdrop-filter: blur(15px);
   font-size: 2rem;
   color: whitesmoke;
 }
@@ -199,7 +194,7 @@
     background-image: url(../assets/Background/contact_large.jpeg);
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
+    min-height: fit-content;
     min-width: 100vw;
   }
 
@@ -216,12 +211,12 @@
   .contact__container p {
     margin-top: 2em;
     margin-left: 3em;
-    font-size: 4.5rem;
+    font-size: 5rem;
     width: 50%;
+    font-weight: 200;
   }
 
   .contact__container p:nth-of-type(2) {
-    font-size: 5rem;
     width: 50%;
     margin-left: auto;
     margin-right: 3em;

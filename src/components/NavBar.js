@@ -1,30 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../style/navbar.css";
 import { HashLink } from "react-router-hash-link";
 
 const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
 
-
   const handleClick = () => {
     setNavbar(!navbar);
   };
-
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (window.scrollY >= 60) {
-  //       setNavbar(true);
-  //     } else {
-  //       setNavbar(false);
-  //     }
-  //   };
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
 
   return (
     <>

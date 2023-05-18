@@ -9,11 +9,11 @@
   min-height: 100vh;
   min-width: 100vw;
   text-align: center;
+  /* display: flex; */
 }
 
-.skills__container h1 {
+.skills__header {
   font-size: 7rem;
-  text-transform: uppercase;
   letter-spacing: 0.135em;
   cursor: default;
   color: rgb(149, 154, 213);
@@ -85,20 +85,24 @@
   .skills__container {
     background-image: url(../assets/Background/skills_large.jpeg);
     background-size: cover;
-    background-position: center;
+    background-position: top;
     min-height: 100vh;
     min-width: 100vw;
   }
 
-  .skills__container h1 {
-    font-size: 13rem;
+  .skills__header {
+    font-size: 15rem;
+    margin-top: 4em;
   }
 
   .skills__list {
     text-align: center;
+    width: 55%;
+    margin: auto;
+    margin-top: 25em;
   }
 
   .skills__button {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }

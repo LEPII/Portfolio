@@ -7,7 +7,6 @@ import Skills from "./Skills";
 import Project from "./Project";
 
 const Landing = ({ handleScrollToSkills, skillsRef }) => {
-
   useEffect(() => {
     Aos.init({ duration: 3000 });
   }, []);
@@ -31,6 +30,7 @@ const Landing = ({ handleScrollToSkills, skillsRef }) => {
           <h1 data-aos="zoom-in-left" data-aos-easing="ease-out-back">
             And Design
           </h1>
+          <span></span>
           <h2 data-aos="zoom-in-up" data-aos-easing="ease-out-back">
             Welcome To My Portfolio
           </h2>
@@ -40,10 +40,7 @@ const Landing = ({ handleScrollToSkills, skillsRef }) => {
             business and consumer use. Feel free to check out my projects below
             and may the force be with you.
           </p>
-          <button
-            className="landing__button"
-            onClick={handleScrollToSkills}
-          >
+          <button className="landing__button" onClick={handleScrollToSkills}>
             Explore
           </button>
         </div>

@@ -14,30 +14,33 @@
   color: rgb(195, 198, 222);
 }
 
+  .project__cards {
+    display: flex;
+    flex-direction: column;
+  }
+
 .project__card {
-  position: relative;
-  max-width: 80vw;
   border-radius: 16px;
-  margin-bottom: 40px;
-  border: 0.5px solid rgba(153, 151, 255, 0.48);
-  box-shadow: -8px -5px 10px rgba(0, 0, 0, 0.25),
-    0px 0px 27px rgba(85, 119, 232, 0.5);
+  margin-bottom: 100px;
+  box-shadow: 0px 0px 40px rgba(97, 152, 212, 0.2),
+   0px 0px 40px rgba(212, 97, 170, 0.2),
+    0px 0px 40px rgba(85, 119, 232, 0.2);
+  width: 80vw;
 }
 
 .project__image {
-  max-width: 100%;
-  border-radius: 16px 16px 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .project__card__body {
-  width: 100%;
   border-radius: 0 0 16px 16px;
   background: linear-gradient(
     0.36deg,
-    rgba(48, 54, 122, 0.497) 20.43%,
-    rgba(66, 57, 81, 0.698) 109.7%
+    rgba(48, 54, 122, 0.671) 20.43%,
+    rgba(58, 57, 81, 0.698) 109.7%
   );
-  box-shadow: 0px -12px 72px rgba(112, 118, 172, 0.476);
   padding-bottom: 3em;
 }
 
@@ -57,14 +60,14 @@
 }
 
 .project__container h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   cursor: default;
 }
 
 .project__skills {
   display: flex;
   justify-content: space-evenly;
-  padding: 0.4em;
+  padding: 2em;
   font-size: 1rem;
 }
 
@@ -88,11 +91,11 @@
   cursor: default;
 }
 
-.project__container h3 {
-  font-size: 1.5rem;
+.project__container p {
+  font-size: 1.3rem;
   text-align: left;
   cursor: default;
-  padding: 0.7em;
+  padding: 1em;
 }
 
 .project__links a {
@@ -112,8 +115,8 @@
 .project__contact {
   margin-top: 40px;
   cursor: default;
-    color: rgb(149, 154, 213);
-  text-shadow: 1px 0px 22px #716fe1, -2px 0px 4px rgba(65, 57, 180, 0.87)
+  color: rgb(149, 154, 213);
+  text-shadow: 1px 0px 22px #716fe1, -2px 0px 4px rgba(65, 57, 180, 0.87);
 }
 
 .project__contact h2 {
@@ -125,19 +128,21 @@
   display: block;
   font-size: 2rem;
   padding: 0.5em;
+ text-align: center;
 }
 
 .convo__button {
   display: block;
   cursor: pointer;
-  color: whitesmoke;    
+  color: whitesmoke;
   border: 0.5px solid rgba(153, 151, 255, 0.48);
   border-radius: 15px;
   background: linear-gradient(
     302.36deg,
     rgba(40, 46, 107, 0.623) 20.43%,
     rgba(82, 71, 100, 0.725) 109.7%
-  );  box-shadow: -8px -5px 10px rgba(0, 0, 0, 0.25),
+  );
+  box-shadow: -8px -5px 10px rgba(0, 0, 0, 0.25),
     0px 0px 27px rgba(85, 119, 232, 0.5);
   text-shadow: 1px 0px 22px #ffffff, -2px 0px 4px rgba(115, 107, 214, 0.87);
   min-width: fit-content;
@@ -154,7 +159,7 @@
 
 .convo__button:hover {
   transform: scale(1.1);
-  filter: brightness(1.2);  
+  filter: brightness(1.2);
 }
 
 @media screen and (min-width: 601px) and (max-width: 1200px) {
@@ -170,8 +175,10 @@
     font-size: 10rem;
   }
 
+
+
   .project__card {
-    max-width: 65vw;
+    width: auto;
   }
 
   .project__skill {
@@ -186,7 +193,7 @@
     font-size: 3.5rem;
   }
 
-  .project__container h3 {
+  .project__container p {
     font-size: 2.5rem;
     margin-top: 3rem;
   }
@@ -207,12 +214,16 @@
     align-items: center;
   }
 
-  .project__card {
-    width: 30vw;
-  }
+.project__cards {
+      flex-direction: row;
 
-  .project__image {
-    width: 100%;
+}
+
+  .project__card {
+   width: 30vw;
+    margin: auto ; 
+    margin-bottom: 100px;
+    margin-left: 100px;
   }
 
   .project__container h1 {
@@ -221,19 +232,27 @@
   }
 
   .project__skills {
-    font-size: 1.8rem;
+    padding: 1em 0em;
+    font-size: 2rem;
   }
 
   .project__container h2 {
     font-size: 5em;
   }
 
-  .project__container h3 {
+  .project__container p {
     font-size: 2rem;
     padding: 1em;
+    margin: auto;
+    text-align: center;
   }
 
   .project__links {
     font-size: 1em;
   }
+
+ .project__contact h2 {
+    font-size: 10em;
+  }
+
 }
