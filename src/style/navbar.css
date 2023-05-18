@@ -22,8 +22,8 @@
 }
 
 .burger_bars > * {
-  width: 7.5em;
-  height: 0.6em;
+  width: 6em;
+  height: 0.3em;
   padding: 0.2em;
   margin: 1.5em 2em;
   background-color: rgb(163, 162, 231);
