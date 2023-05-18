@@ -14,12 +14,10 @@
   margin: 0;
 }
 .navbar > * {
-  margin: 0.1em 5em;
+  margin: 3em 3em;
 }
 
-.burger_bars {
-  margin-top: 5em;
-}
+
 
 .burger_bars > * {
   width: 6em;
