@@ -1,6 +1,6 @@
 .navbar {
   position: fixed;
-  right:0;
+  right: 0;
   top: 0em;
   width: 100%;
   display: flex;
@@ -38,6 +38,7 @@
   );
   backdrop-filter: blur(15px);
   padding-bottom: 7em;
+  height: 100vh;
 }
 
 .navbar.closed ul {
@@ -53,7 +54,7 @@
   min-height: 100vw;
   align-items: center;
   margin: auto;
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   font-weight: 200;
   list-style-type: none;
 }
@@ -108,17 +109,19 @@
 
 @media screen and (min-width: 1201px) {
   .navbar {
-    width: 15vw;
-    max-height: fit-content;
+    width: 17vw;
     border-bottom-left-radius: 80px;
   }
 
+  .navbar.open {
+      height: 50vh;
+  }
+  
   .navbar.open ul {
     justify-content: flex-start;
     align-items: center;
     width: fit-content;
-      min-height: fit-content;
-
+    min-height: fit-content;
   }
 
   .navbar.open ul li {

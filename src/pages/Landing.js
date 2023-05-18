@@ -1,14 +1,15 @@
 import React, { useEffect } from "react";
-import Ship from "../assets/Logos/Ship.png";
 import "../style/landing.css";
+import Ship from "../assets/Logos/Ship.png";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Skills from "./Skills";
 import Project from "./Project";
 
 const Landing = ({ handleScrollToSkills, skillsRef }) => {
+
   useEffect(() => {
-    Aos.init({ duration: 3000 });
+    Aos.init({ duration: 2500 });
   }, []);
 
   return (

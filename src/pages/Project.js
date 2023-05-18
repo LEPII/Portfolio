@@ -1,30 +1,31 @@
-import React, {useState} from "react";
+import React from "react";
 import HodWiki from "../assets/ProjectsCover/hod.png";
+import MotionScope from "../assets/ProjectsCover/deadlift.png";
 import "../style/projects.css";
 import { HashLink } from "react-router-hash-link";
 
 const Project = () => {
 
-  const [cardOpen, useCardOpen] = useState(false)
-
   const projects = [
     {
       name: "House of Dragons Wiki Page",
+      finished: true,
       image: HodWiki,
       alt: "House of Dragons Fan Page",
       skills: ["HTML", "CSS", "React"],
       repo: "https://github.com/LEPII/houseOfDragonsFanPage",
       link: "http://houseofdragonsfp.com/",
       about:
-        "A House of Dragons fan-made wiki as a comprehensive resource for fans to explore the world of the popular book series, providing detailed summaries, analyses, and community-driven content.",
+        "A House of Dragons fan-made wiki offers a comprehensive digital hub, with in-depth summaries, insightful analyses, and a vibrant community, inviting fans to explore the captivating world of the popular book series.",
     },
     {
       name: "MotionScope",
-      image: HodWiki,
-      alt: "House of Dragons Fan Page",
+      finished: false,
+      image: MotionScope,
+      alt: "MotionScope",
       skills: ["Typescript", "Firebase", "React"],
       about:
-        "A House of Dragons fan-made wiki as a comprehensive resource for fans to explore the world of the popular book series, providing detailed summaries, analyses, and community-driven content.",
+        "The fitness app combines workout tracking, personalized program creation, and educational resources on form, programming, weight loss, and overall health, empowering users to achieve their fitness goals while gaining valuable statistical insights.",
     },
   ];
 
@@ -66,25 +67,30 @@ const Project = () => {
                   })}
                 </div>
                 <h2> {project.name}</h2>
-                <p>{project.about}</p>
-                <div className="project__links">
-                  <a
-                    href={project.repo}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="project__link"
-                  >
-                    Visit Github
-                  </a>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="project__link"
-                  >
-                    Visit Website
-                  </a>
-                </div>
+                <p className="project__about">{project.about}</p>
+
+                {project.finished ? (
+                  <div className="project__links">
+                    <a
+                      href={project.repo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project__link"
+                    >
+                      Visit Github
+                    </a>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="project__link"
+                    >
+                      Visit Website
+                    </a>
+                  </div>
+                ) : (
+                  <p>Coming Soon</p>
+                )}
               </div>
             </div>
           );

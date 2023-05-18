@@ -1,11 +1,20 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import Landing from "./pages/Landing";
+import LoadingScreen from "./components/LoadingScreen";
 
 const App = () => {
   const skillsRef = useRef(null);
   const scrollOffset = 200;
+  const [appLoaded, setAppLoaded] = useState(false);
+
+  // Simulating a delay for demonstration purposes
+  useEffect(() => {
+    setTimeout(() => {
+      setAppLoaded(true);
+    }, 200);
+  }, []);
 
   const handleScroll = () => {
     const targetPosition =
@@ -21,11 +30,17 @@ const App = () => {
 
   return (
     <>
-      <NavBar />
-      <Landing
-        handleScrollToSkills={handleScroll}
-        skillsRef={skillsRef}
-      ></Landing>
+      {!appLoaded ? (
+        <LoadingScreen />
+      ) : (
+        <>
+          <NavBar />
+          <Landing
+            handleScrollToSkills={handleScroll}
+            skillsRef={skillsRef}
+          ></Landing>
+        </>
+      )}
     </>
   );
 };

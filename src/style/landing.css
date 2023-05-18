@@ -26,7 +26,7 @@
 }
 
 .landing__container h1 {
-  font-size: 6rem;
+  font-size: 5rem;
   text-transform: uppercase;
   font-weight: lighter;
   padding: 0em 0.1em;
@@ -35,7 +35,8 @@
 }
 
 .landing__container img {
-  width: 5rem;
+  width: 7em;
+  margin-left: 2em;
 }
 
 .landing__container h2 {

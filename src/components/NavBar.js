@@ -24,8 +24,10 @@ const NavBar = () => {
           <li>
             <HashLink to="/#home_top">&lt; Home &#47;&gt;</HashLink>
           </li>
-          <li>
-            <HashLink to="/#pro_top">&lt; Projects &#47;&gt;</HashLink>
+          <li >
+            <HashLink to="/#pro_top" >
+              &lt; Projects &#47;&gt;
+            </HashLink>
           </li>
           <li>
             <HashLink to="/contact/#top">&lt; Contact &#47;&gt;</HashLink>

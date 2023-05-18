@@ -5,7 +5,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
-  min-height: 90vh;
+  min-height: auto;
   min-width: 100vw;
   display: flex;
   flex-direction: column;
@@ -14,17 +14,17 @@
   color: rgb(195, 198, 222);
 }
 
-  .project__cards {
-    display: flex;
-    flex-direction: column;
-  }
+.project__cards {
+  display: flex;
+  flex-direction: column;
+}
 
 .project__card {
   border-radius: 16px;
   margin-bottom: 100px;
+  border: solid 1px #716fe15b ;
   box-shadow: 0px 0px 40px rgba(97, 152, 212, 0.2),
-   0px 0px 40px rgba(212, 97, 170, 0.2),
-    0px 0px 40px rgba(85, 119, 232, 0.2);
+    0px 0px 40px rgba(212, 97, 170, 0.2), 0px 0px 40px rgba(85, 119, 232, 0.2);
   width: 80vw;
 }
 
@@ -32,6 +32,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+    border-radius: 16px;
+
 }
 
 .project__card__body {
@@ -49,7 +51,7 @@
 }
 
 .project__container h1 {
-  font-size: 7rem;
+  font-size: 5rem;
   cursor: default;
   letter-spacing: 0.1em;
   padding-bottom: 0.3em;
@@ -60,7 +62,7 @@
 }
 
 .project__container h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   cursor: default;
 }
 
@@ -81,6 +83,7 @@
   box-shadow: -8px -5px 10px rgba(0, 0, 0, 0.25),
     0px 0px 27px rgba(85, 119, 232, 0.5);
   padding: 0.4em 2em;
+  margin-top: 1em;
   border-radius: 60px;
   transition: transform 0.4s ease-in-out, filter 0.2s ease-in-out;
 }
@@ -91,15 +94,21 @@
   cursor: default;
 }
 
-.project__container p {
-  font-size: 1.3rem;
-  text-align: left;
+.project__about {
+  font-size: 1.8rem;
   cursor: default;
   padding: 1em;
+  text-align: left;
+}
+
+.project__container p {
+  font-size: 1.8rem;
+  padding: 1em;
+  margin: auto;
 }
 
 .project__links a {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-decoration: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
@@ -128,7 +137,7 @@
   display: block;
   font-size: 2rem;
   padding: 0.5em;
- text-align: center;
+  text-align: center;
 }
 
 .convo__button {
@@ -175,10 +184,8 @@
     font-size: 10rem;
   }
 
-
-
   .project__card {
-    width: auto;
+    width: 70vw;
   }
 
   .project__skill {
@@ -195,11 +202,6 @@
 
   .project__container p {
     font-size: 2.5rem;
-    margin-top: 3rem;
-  }
-
-  .project__contact p {
-    font-size: 2.5rem;
   }
 }
 
@@ -214,16 +216,15 @@
     align-items: center;
   }
 
-.project__cards {
-      flex-direction: row;
-
-}
+  .project__cards {
+    flex-direction: row;
+  }
 
   .project__card {
-   width: 30vw;
-    margin: auto ; 
+    width: 30vw;
+    margin: auto;
     margin-bottom: 100px;
-    margin-left: 100px;
+    margin-left: 50px;
   }
 
   .project__container h1 {
@@ -240,19 +241,11 @@
     font-size: 5em;
   }
 
-  .project__container p {
-    font-size: 2rem;
-    padding: 1em;
-    margin: auto;
-    text-align: center;
-  }
-
   .project__links {
     font-size: 1em;
   }
 
- .project__contact h2 {
+  .project__contact h2 {
     font-size: 10em;
   }
-
 }
