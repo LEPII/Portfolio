@@ -80,14 +80,14 @@
   .skills__container {
     background-image: url(../assets/Background/skills_large.jpeg);
     background-size: cover;
-    background-position: top;
+    background-position: center;
     min-height: 100vh;
     min-width: 100vw;
   }
 
   .skills__header {
     font-size: 15rem;
-    margin-top: 2em;
+    margin-top: 1em;
     margin-bottom: 1.2em;
   }
 
