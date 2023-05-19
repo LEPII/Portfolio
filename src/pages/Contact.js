@@ -1,14 +1,28 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "../style/contact.css";
-import emailjs from "@emailjs/browser";
+import NavBar from "../components/NavBar";
 import GitHub from "../assets/Logos/github.png";
 import LinkedIn from "../assets/Logos/linkedin.png";
-import NavBar from "../components/NavBar";
+import emailjs from "@emailjs/browser";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Contact = ({ envVars }) => {
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-
   const form = useRef();
+
+  const contact__icons = [
+    {
+      src: LinkedIn,
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/luis-perez-b72069137/",
+    },
+    {
+      src: GitHub,
+      name: "GitHub",
+      link: "https://github.com/LEPII",
+    },
+  ];
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -27,18 +41,9 @@ const Contact = ({ envVars }) => {
       );
   };
 
-  const contact__icons = [
-    {
-      src: LinkedIn,
-      name: "LinkedIn",
-      link: "https://www.linkedin.com/in/luis-perez-b72069137/",
-    },
-    {
-      src: GitHub,
-      name: "GitHub",
-      link: "https://github.com/LEPII",
-    },
-  ];
+  useEffect(() => {
+    Aos.init({ duration: 2500 });
+  }, []);
 
   return (
     <>
@@ -46,12 +51,12 @@ const Contact = ({ envVars }) => {
       <section className="contact__container" id="top">
         <div className="contact__info">
           <h1> Contact </h1>
-          <p data-aos="fade-right" data-aos-once="true">
+          <p data-aos="fade-right">
             Whether you're a fellow Miami Heat/Dolphins fan, a hiring manager,
             recruiter, business owner, or blockchain enthusiast/developer, I'm
             eager to connect with you!
           </p>
-          <p data-aos="fade-up" data-aos-once="true">
+          <p data-aos="fade-up">
             As a web developer, I'm always looking for exciting new projects to
             collaborate on. So, if you have a web development project in mind,
             or just want to chat about our shared interests, feel free to reach
@@ -62,7 +67,7 @@ const Contact = ({ envVars }) => {
       </section>
       <form ref={form} onSubmit={sendEmail} className="contact__form">
         <h4 className="contact_location">
-          Based in the Miami-Fort Lauderdale, FL Area <br /> Available Remotely
+          Based in the Miami-Fort Lauderdale, FL Area <br /> Remotely Available
         </h4>
         <a
           href="mailto:lperezdev843@gmail.com"

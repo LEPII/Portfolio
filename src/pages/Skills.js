@@ -2,6 +2,7 @@ import React from "react";
 import "../style/skills.css";
 
 const Skills = ({ skillsRef }) => {
+
   const skills = [
     { name: "Javascript" },
     { name: "HTML" },
@@ -31,14 +32,16 @@ const Skills = ({ skillsRef }) => {
       </h1>
       <div className="skills__list">
         {skills.map((skill, index) => (
-          <span
-            className="skills__button"
-            key={index}
-            data-aos="fade-up"
-            data-aos-delay="800"
-          >
-            {skill.name}
-          </span>
+          <ul>
+            <li
+              className="skills__button"
+              key={index}
+              data-aos="fade-up"
+              data-aos-delay="800"
+            >
+              {skill.name}
+            </li>
+          </ul>
         ))}
       </div>
     </section>

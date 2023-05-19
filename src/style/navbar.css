@@ -17,24 +17,20 @@
   margin: 3em 3em;
 }
 
-
-
 .burger_bars > * {
   width: 6em;
   height: 0.3em;
   padding: 0.2em;
   margin: 1.5em 2em;
-  background-color: rgb(163, 162, 231);
+  background: rgba(107, 134, 231, 0.998);
   border-radius: 0.2em;
 }
 
 .navbar.open {
-  background: linear-gradient(
-    0.36deg,
-    rgba(48, 54, 122, 0.353) 20.43%,
-    rgba(170, 168, 181, 0.071) 109.7%
-  );
-  backdrop-filter: blur(15px);
+  background: rgba(60, 81, 159, 0.357);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(14.7px);
+  -webkit-backdrop-filter: blur(14.7px);
   padding-bottom: 7em;
   height: 100vh;
 }
@@ -112,9 +108,11 @@
   }
 
   .navbar.open {
-      height: 50vh;
+    height: 50vh;
+    border-bottom: 3px solid rgba(60, 82, 159, 0.4);
+    border-left: 1px solid rgba(60, 82, 159, 0.4);
   }
-  
+
   .navbar.open ul {
     justify-content: flex-start;
     align-items: center;

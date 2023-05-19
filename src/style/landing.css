@@ -12,8 +12,8 @@
   min-height: 100vh;
   cursor: default;
   letter-spacing: 0.045em;
-  color: rgb(149, 154, 213);
-  text-shadow: 1px 0px 22px #716fe1, -2px 0px 4px rgba(65, 57, 180, 0.87);
+  color: rgb(109, 135, 226);
+  text-shadow: 1px 0px 22px #716fe1, -2px 0px 4px rgba(122, 118, 179, 0.383);
   text-align: center;
 }
 
@@ -35,8 +35,11 @@
 }
 
 .landing__container img {
-  width: 5em;
-  margin-left: 2em;
+  position: relative;
+  top: 1.5em;
+  width: 7em;
+  margin-left: 1em;
+  rotate: 20deg;
 }
 
 .landing__container h2 {

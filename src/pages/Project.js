@@ -59,16 +59,17 @@ const Project = () => {
                   {project.skills.map((skills, index) => {
                     return (
                       <>
-                        <span className="project__skill" key={index}>
-                          {skills}
-                        </span>
+                        <ul>
+                          <li className="project__skill" key={index}>
+                            {skills}
+                          </li>
+                        </ul>
                       </>
                     );
                   })}
                 </div>
                 <h2> {project.name}</h2>
                 <p className="project__about">{project.about}</p>
-
                 {project.finished ? (
                   <div className="project__links">
                     <a
@@ -103,7 +104,7 @@ const Project = () => {
           opportunities, Web3 and Blockchain, or just say hi!
         </p>
         <HashLink to="/contact/#top">
-          <button className="convo__button"> Start a Conversation </button>
+          <button className="project__button"> Start a Conversation </button>
         </HashLink>
       </div>
     </section>

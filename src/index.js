@@ -5,7 +5,10 @@ import App from "./App";
 import Contact from "./pages/Contact";
 import ErrorPage from "./components/ErrorPage";
 import dotenv from "dotenv";
+
+
 dotenv.config();
+
 
  const envVars = {
    emailKey: process.env.REACT_APP_EMAIL_KEY,

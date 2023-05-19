@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../style/navbar.css";
 import { HashLink } from "react-router-hash-link";
 
+
 const NavBar = () => {
   const [navbar, setNavbar] = useState(false);
 
@@ -22,10 +23,12 @@ const NavBar = () => {
         </div>
         <ul>
           <li>
-            <HashLink to="/#home_top">&lt; Home &#47;&gt;</HashLink>
+            <HashLink to="/#home_top" smooth={true} duration={500}>
+              &lt; Home &#47;&gt;
+            </HashLink>
           </li>
-          <li >
-            <HashLink to="/#pro_top" >
+          <li>
+            <HashLink to="/#pro_top" smooth={true} duration={500}>
               &lt; Projects &#47;&gt;
             </HashLink>
           </li>

@@ -3,13 +3,18 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import Landing from "./pages/Landing";
 import LoadingScreen from "./components/LoadingScreen";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const App = () => {
   const skillsRef = useRef(null);
-  const scrollOffset = 200;
+  const scrollOffset = 300;
   const [appLoaded, setAppLoaded] = useState(false);
 
-  // Simulating a delay for demonstration purposes
+  useEffect(() => {
+    Aos.init({ duration: 2500 });
+  }, []);
+
   useEffect(() => {
     setTimeout(() => {
       setAppLoaded(true);
