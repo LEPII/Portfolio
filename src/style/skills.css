@@ -9,13 +9,14 @@
   min-height: 100vh;
   min-width: 100vw;
   text-align: center;
+    color: rgb(109, 135, 226);
 }
 
 .skills__header {
   font-size: 5rem;
   letter-spacing: 0.135em;
   cursor: default;
-  color: rgb(149, 154, 213);
+
   text-shadow: 1px 0px 22px #716fe1, -2px 0px 4px rgba(65, 57, 180, 0.87);
   margin-bottom: 2em;
 }
