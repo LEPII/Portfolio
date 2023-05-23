@@ -32,8 +32,7 @@ const Landing = ({ handleScrollToSkills, skillsRef }) => {
           <p data-aos="zoom-in-up" data-aos-easing="ease-out-back">
             I'm a creative Full-Stack Developer partnering with talented people
             focused on creating and delivering a digital product for both
-            business and consumer use. Feel free to check out my projects below
-            and may the force be with you.
+            business and consumer use. Feel free to check out my projects below!
           </p>
           <button className="landing__button" onClick={handleScrollToSkills}>
             Explore

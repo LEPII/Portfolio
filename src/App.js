@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 
 const App = () => {
   const skillsRef = useRef(null);
-  const scrollOffset = 300;
+  const scrollOffset = 400;
   const [appLoaded, setAppLoaded] = useState(false);
 
   useEffect(() => {

@@ -15,7 +15,6 @@
   text-align: center;
   color: rgb(109, 135, 226);
   text-shadow: 1px 0px 22px #716fe1, -2px 0px 4px rgba(65, 57, 180, 0.87);
-  padding-top: 20em;
   cursor: default;
 }
 
@@ -37,7 +36,8 @@
   letter-spacing: 0.15em;
   font-size: 5rem;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-top: 2em;
+  margin-bottom: 1em;
 
 }
 
@@ -46,7 +46,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 1em;
-   background: rgba(60, 81, 159, 0.357);
+  background: rgba(60, 81, 159, 0.357);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(14.7px);
   -webkit-backdrop-filter: blur(14.7px);

@@ -18,8 +18,8 @@
 }
 
 .burger_bars > * {
-  width: 6em;
-  height: 0.3em;
+  width: 5em;
+  height: 0.2em;
   padding: 0.2em;
   margin: 1.5em 2em;
   background: rgba(107, 134, 231, 0.998);
@@ -73,7 +73,7 @@
 }
 
 .navbar.open > div > div:nth-child(1) {
-  transform: rotate(45deg) translate(3em, 1em);
+  transform: rotate(45deg) translate(2.5em, 0.5em);
   transition: ease-out 0.1s;
 }
 
