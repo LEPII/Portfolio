@@ -30,7 +30,7 @@ const Landing = ({ handleScrollToSkills, skillsRef }) => {
             Welcome To My Portfolio
           </h2>
           <p data-aos="zoom-in-up" data-aos-easing="ease-out-back">
-            I'm a creative Full-Stack Developer partnering with talented people
+            I'm a creative Front-End Developer partnering with talented people
             focused on creating and delivering a digital product for both
             business and consumer use. Feel free to check out my projects below!
           </p>

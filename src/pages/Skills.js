@@ -7,16 +7,19 @@ const Skills = ({ skillsRef }) => {
     { name: "Javascript" },
     { name: "HTML" },
     { name: "CSS" },
+    { name: "Tailwind" },
     { name: "React" },
     { name: "Node.JS" },
     { name: "Express" },
     { name: "NoSQL" },
     { name: "SQL" },
     { name: "GraphQL" },
+    { name: "Next" },
     { name: "Prisma" },
     { name: "Version Control" },
     { name: "UI-UX Design" },
-    { name: "Animations" },
+    { name: "Agile Development"},
+    { name: "Animations"},
   ];
 
   return (

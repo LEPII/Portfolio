@@ -1,5 +1,6 @@
 import React from "react";
 import HodWiki from "../assets/ProjectsCover/hod.png";
+import Movies from "../assets/ProjectsCover/movies.png";
 import MotionScope from "../assets/ProjectsCover/deadlift.png";
 import "../style/projects.css";
 import { HashLink } from "react-router-hash-link";
@@ -18,15 +19,27 @@ const Project = () => {
       about:
         "A House of Dragons fan-made wiki offers a comprehensive digital hub, with in-depth summaries, insightful analyses, and a vibrant community, inviting fans to explore the captivating world of the popular book series.",
     },
-    {
-      name: "MotionScope",
-      finished: false,
-      image: MotionScope,
-      alt: "MotionScope",
-      skills: ["Typescript", "Firebase", "React"],
+        {
+      name: "Cinemate - Entertainment App",
+      finished: true,
+      image: Movies,
+      alt: "Cinemate Entertainment App",
+      skills: ["Clerk", "Tailwind", "React"],
+      repo: "https://github.com/grammerjam/tg-main",
+      link: "https://develop--transcendent-arithmetic-b66dd1.netlify.app/",
       about:
-        "The fitness app combines workout tracking, personalized program creation, and educational resources on form, programming, weight loss, and overall health, empowering users to achieve their fitness goals while gaining valuable statistical insights.",
+        "Cinemate is a cutting-edge streaming platform that revolutionizes the way users discover, watch, and engage with their favorite films and series, all within an immersive and user-friendly interface.",
     },
+  
+    // {
+    //   name: "MotionScope",
+    //   finished: false,
+    //   image: MotionScope,
+    //   alt: "MotionScope",
+    //   skills: ["Typescript", "Firebase", "React"],
+    //   about:
+    //     "The fitness app combines workout tracking, personalized program creation, and educational resources on form, programming, weight loss, and overall health, empowering users to achieve their fitness goals while gaining valuable statistical insights.",
+    // },
   ];
 
   return (
@@ -44,7 +57,7 @@ const Project = () => {
             <div
               className="project__card"
               data-aos="fade-up"
-              data-aos-duration="6000"
+              data-aos-duration="3000"
               key={index}
             >
               <img
@@ -101,7 +114,7 @@ const Project = () => {
         <h2> Interested In collaborating? </h2>
         <p>
           I'd love to discuss anything from consultation, partnership
-          opportunities, Web3 and Blockchain, or just say hi!
+          opportunities or just say hi!
         </p>
         <HashLink to="/contact/#top">
           <button className="project__button"> Start a Conversation </button>

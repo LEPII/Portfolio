@@ -68,7 +68,7 @@
 
   .skills__container h1 {
     font-size: 10rem;
-      margin-bottom: 2.5em;
+    margin-bottom: 2em;
 
   }
   .skills__list {
@@ -76,7 +76,7 @@
   }
 }
 
-@media screen and (min-width: 1201px) {
+@media screen and (min-width: 1201px) and (max-width: 1400px) {
   .skills__container {
     background-image: url(../assets/Background/skills_large.jpeg);
     background-size: cover;
@@ -88,7 +88,7 @@
   .skills__header {
     font-size: 15rem;
     margin-top: 1em;
-    margin-bottom: 1.2em;
+    margin-bottom: 0.51em;
   }
 
   .skills__list {
@@ -100,4 +100,30 @@
   .skills__button {
     font-size: 3rem;
   }
+}
+
+@media screen and (min-width: 1401px) {
+  .skills__container {
+      background-image: url(../assets/Background/skills_large.jpeg);
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      min-width: 100vw;
+    }
+  
+    .skills__header {
+      font-size: 15rem;
+      margin-top: 1em;
+      margin-bottom: 2em;
+    }
+  
+    .skills__list {
+      text-align: center;
+      width: 55%;
+      margin: auto;
+    }
+  
+    .skills__button {
+      font-size: 4rem;
+    }
 }
